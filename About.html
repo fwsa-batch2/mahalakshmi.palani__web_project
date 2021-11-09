@@ -1,9 +1,16 @@
 <html>
 	<head>
 		<style>
-			#parent{
+			#parent1{
 				width:80%;
-				height:80%;
+				height:60%;
+				margin:auto;
+				margin-top:5%;
+				//box-shadow: 0px 0px 3px black;
+			}
+			#parent2{
+				width:80%;
+				height:60%;
 				margin:auto;
 				margin-top:5%;
 				//box-shadow: 0px 0px 3px black;
@@ -27,6 +34,27 @@
 				background-color:white;
 				box-sizing:border-box;
 				
+				
+			}
+			#child3{
+				width:50%;
+				height:100%;
+				//border:1px solid black;
+				box-sizing:border-box;
+				float:left;
+			 	background-color:white;
+			 	overflow:hidden;
+				
+			}
+			#child4{
+				width:50%;
+				height:100%;
+				//border:1px solid black;
+				float:left;
+				position: relative;
+				background-color:white;
+				box-sizing:border-box;
+				
 			}
 			body{
 				margin:0;
@@ -37,7 +65,13 @@
 			}
 			#img1{
 				width:90%;
-				height:50%;
+				height:64%;
+				margin-top:20%;
+				
+			}
+			#img2{
+				width:90%;
+				height:64%;
 				margin-top:20%;
 				
 			}
@@ -45,7 +79,14 @@
 				font-size:30px;
 				font-family: 'Dancing Script', cursive;
 				position:absolute;
-				top:29%;
+				top:36%;
+				
+			}
+			#para3{
+				font-size:30px;
+				font-family: 'Dancing Script', cursive;
+				position:absolute;
+				top:36%;
 			}
 			#para1{
 				margin:0;
@@ -57,10 +98,20 @@
 			}
 			#head2{
 				position:absolute;
-				top:15%;
+				top:25%;
 				color:#8F8F8F;
 				font-family: 'Dancing Script', cursive;
-				font-size:30px;
+				font-size:40px;
+				left:35%;
+				//text-align:center;
+				margin-top: 5%;
+			}
+			#head3{
+				position:absolute;
+				top:25%;
+				color:#8F8F8F;
+				font-family: 'Dancing Script', cursive;
+				font-size:40px;
 				left:15%;
 				//text-align:center;
 			}
@@ -141,16 +192,29 @@
 			<p id = "para1">Klassy</p>
 		</div>
 		<h1 id = "head1">About us.....!</h1>
-		<div id = "parent">
+		<div id = "parent1">
 			
 			<div id = "child1">
 				<img id = "img1"src = "pexels-ella-olsson-1640777.jpg">
 			</div>
 			<div id = "child2">	
-				<h1 id = "head2">We Leave A Delicious Memory For You</h1>
-				<p id = "para2"align = "center">We are dedicated to serving freshly prepared and healthy dining options.
+				<h1 id = "head2">klassy restaurant</h1>
+				<p id = "para2"align = "center">It perfectly satisfies digital ordering delivery.Make it easy for guests to discover our restaurant  online and exactly what they’re looking for.In other restaurants the price is high .I want people to enjoy high class restaurants with good quality food at a low price. 
+
+</p>		
+			</div>
+		</div>
+		<div id = "parent2">
+			
+			
+			<div id = "child4">	
+				<h1 id = "head3">We Leave A Delicious Memory For You</h1>
+				<p id = "para3"align = "center">We are dedicated to serving freshly prepared and healthy dining options.
 
 Whenever possible, we support our local farmers and vendors.Our menu items are made in-house, to order, with fresh and natural ingredients. We use only cage-free eggs, natural meats, organic tofu, and all fresh fruits and veggies for our homemade juices. We also use organic, locally roasted Caroline’s coffee.</p>		
+			</div>
+			<div id = "child3">
+				<img id = "img2"src = "eggs-breakfast-avocado-1296x728-header.jpg">
 			</div>
 		</div>
 		
