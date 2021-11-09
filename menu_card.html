@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<script type="text/javascript" src="message.js"></script> 
 		<style>
 			#div1{
 				height:10%;
@@ -23,7 +24,7 @@
 				color:black;
 				
 			}
-			ul{
+			#ul1{
 				margin:0;
 				position: absolute;
 				top:35;
@@ -54,7 +55,7 @@
 				border-radius:50px;
 				
 			}
-			#div2{
+			#div3{
 				width:80%;
 				height:100%;
 				//border:1px solid black;
@@ -87,11 +88,26 @@
 				font-size: 40px;
 				text-align:center;
 			}
+			.menu{
+				height:100%;
+				width:30%;
+				box-sizing:border-box;
+				border:1px solid black;
+				float:left;
+				
+			}
+			#div2{
+				width:90%;
+				box-sizing:border-box;
+				border:1px solid black;
+				height:80%;
+			}
+			
 		</style>
 	</head>
 	<body>
 		<div id = "div1">
-			<ul>
+			<ul id = "ul1">
 				<a href = "Home_page.html"><li>Home</li>
 				<a href = "About.html"><li>About</li></a>
 				<a href = "Menu.html"><li>Menu</li></a>
@@ -103,7 +119,17 @@
 			
 		</div>
 		<h1>Our Menu</h1>
-		<div id = "div2">
+		<!--<div id = "div2">
+			<div class = "menu" id = "menu-div1">
+				<h2>Drinks & Wines</h2>
+				<h4>Raimat Abadia </h4>
+			</div>
+			<div class = "menu" id = "menu-div2">
+				
+			</div>
+			<div class = "menu" id = "menu-div3"></div>
+		</div>-->
+		<div id = "div3">
 			
 			<div id = "child1" class = "img-div">
 				<img src ="steak.jpg" class = "img1">
@@ -141,5 +167,9 @@
 				<p>orange juice Rs.130</p>
 			</div>
 		</div>
+		<script type="text/javascript">
+			alert("hello world")
+			alert("mahalakshmi")
+		</script>
 	</body>
 </html>
