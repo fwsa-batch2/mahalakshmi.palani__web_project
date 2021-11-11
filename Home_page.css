@@ -1,10 +1,4 @@
-<html>
-	<head>
-		<title>loginform</title>
-		<Style>
-			
-			
-			body{
+body{
 				//background-image:url("slider_cup_orange-min.jpg");
 				//background-repeat: no-repeat;
 				//background-attachment: fixed;
@@ -100,33 +94,3 @@
 				font-size:20px;
 				
 			}
-		</style>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
-	</head>
-	<body>
-		<div id = "div1">
-			<ul>
-				<a href = "Home_page.html" target = "blank"><li>Home</li>
-				<a href = "About.html" target = "blank"><li>About</li></a>
-				<a href = "menu.html" target = "blank"><li>Menu</li></a>
-				<a href = "Contact.html" target = "blank"><li>Contact</li></a>
-				
-			</ul>
-			<img id = "logo" src = "201-2011704_restaurant-jd-sports-logo-png-transparent-png.png">
-			<p id = "para1">Klassy</p>
-		</div>
-		<div id = "div2">
-			<div id = "child1">
-				<h1>Klassy Restaurant</h1>
-				<p id = "para2">THE BEST EXPERIENCE</p>
-				<div id = "login">
-					<a href = "order.html"><button>Login</button></a>
-				</div>
-			</div>
-			<div id = "child2"></div>
-		</div>
-		
-	</body>
-<html>
