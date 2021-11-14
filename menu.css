@@ -7,7 +7,7 @@
 			}
 			body{
 				margin:0;
-				background-image:url("abstract-gradient-gray-geometric-background-vector-2652243.jpg");
+				background-image:url("upwk61717789-wikimedia-image.jpg");
 				//background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: 100%;
@@ -22,7 +22,7 @@
 				font-size:20px;
 				height: 36;
 				padding-left: 22;
-				padding-top: 3;
+				padding-top:10;
 				padding-right: 13;
 				color: black;
 				
@@ -52,7 +52,7 @@
 			#para1{
 				margin:0;
 				position: absolute;
-				top: 9;
+				top: 15px;
 				right: 106px;
 				font-size: 60px;
 				font-family: 'Dancing Script', cursive;
@@ -63,6 +63,7 @@
 				position: absolute;
 				right:0;
 				border-radius:50px;
+				top:3px;
 			}
 			
 			#home{
@@ -88,7 +89,7 @@
 				font-size: 40px;
 			}
 			button{
-				border: 1px solid black;
+				//border: 1px solid black;
 				top: 80%;
 				position: absolute;
 				left: 38%;

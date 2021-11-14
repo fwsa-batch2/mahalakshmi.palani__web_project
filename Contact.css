@@ -21,7 +21,7 @@
 				height: 80%;
 				position: absolute;
 				top:45;
-				left:100;
+				left:88;
 			}
 			#input2{
 				width: 85%;
@@ -47,7 +47,7 @@
 				font-size:20px;
 				height: 36;
 				padding-left: 22;
-				padding-top: 3;
+				padding-top:10;
 				padding-right: 13;
 				color:black;
 				
@@ -79,11 +79,12 @@
 				position: absolute;
 				right:0;
 				border-radius:50px;
+				top:3px;
 				
 			}
 			body{
 				margin:0;
-				//background-image:url("cropped-GettyImages-643764514.jpg");
+				background-image:url("istockphoto-1311934969-612x612.jpg");
 				background-repeat :no-repeat;
 				background-size:100%;
 				background-attachment: fixed;

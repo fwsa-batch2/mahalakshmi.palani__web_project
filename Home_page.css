@@ -19,7 +19,7 @@ body{
 				font-size:20px;
 				height: 36;
 				padding-left: 22;
-				padding-top: 3;
+				padding-top: 10px;
 				padding-right: 13;
 				color:black;
 				
@@ -41,6 +41,7 @@ body{
 				position: absolute;
 				right:0;
 				border-radius:50px;
+				top:3px;
 			}
 			#para1{
 				margin:0;
