@@ -1,131 +1,146 @@
-<html>
-	<head>
-		<title>Register</title>
-		<style>
-			div{
-				width:30%;
-				//border:1px solid black;
-				margin:auto;
-				margin-top:15%;
-			}
-			.value{
-				width:100%;
-				height:7%;
-				border:none;
-				//border-bottom:1px solid black;
-				margin-top:2%;
-				padding-left:2%;
-				font-size:15px;
-				background-color:#dadbd6;
-			}
-			#button{
-				width:50%;
-				height:7%;
-				margin-top:2%;
-				margin-left:22%;
-				font-size:15px;
-				background-color:#dadbd6;
-				border:1px solid black;
-			}
-			h1{
-				text-align:center;
-			}
-			body{
-				background-image:url("../assets/img/White-Desk-Simple-Background-Image-.jpg");
-				background-repeat :no-repeat;
-				background-size:100%;
-				background-attachment: fixed;
-				width: 100%;
-				height: 70%;
-			}
-			img {
-				width :5%;
-				border-radius: 60%;
-				right:0px;
-				position:absolute;
-				top:0;
-				
-				
-			}
-			
-		</style>
-	</head>
-	<body>
-		<a href = "login.html"><img src = "../assets/img/login-icon.png"></a>
-		<div>
-			<h1>Welcome</h1>
-			<form onsubmit = "submitHandler()">
-				<input class = "value" type = "text" placeholder = "User name" required  id = "name"><br>
-				<input class = "value" type = "text" placeholder = "Email ID"required id = "mail"><br>
-				<input class = "value" type = "password" placeholder = "Password" maxlength="8"required id = "password" ><br>
-				<input class = "value" type = "password" placeholder = "confirm Password" maxlength="8"required id = "cpassword" ><br>
-				<input id = "button" type = "submit" placeholder = "Register" value = "Register now"  required>
-				<div id = "div"></div>
-			</form>
-		</div>
-		<script>
-		
-			let userlist = [];
-		
-			function submitHandler(){
-				event.preventDefault();
-				//alert("called");
-				let name = document.getElementById("name").value;
-				let mail = document.getElementById("mail").value;
-				let password = document.getElementById("password").value;
-				let cpassword = document.getElementById("cpassword").value;
-				
-				let value = {
-					"name":name,
-					"email":mail,
-					"password":password,
-					"confirm password":cpassword
-				}
-				userlist.push(value);
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register</title>
+
+	<style>
+		div {
+			width: 30%;
+			border: 1px solid black;
+			margin: auto;
+			margin-top: 15%;
+		}
+
+		.value {
+			width: 100%;
+			height: 7%;
+			border: none;
+			border-bottom: 1px solid black;
+			margin-top: 2%;
+			padding-left: 2%;
+			font-size: 15px;
+			background-color: #dadbd6;
+		}
+
+		#button {
+			width: 50%;
+			height: 7%;
+			margin-top: 2%;
+			margin-left: 22%;
+			font-size: 15px;
+			background-color: #dadbd6;
+			border: 1px solid black;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		body {
+			background-image: url("./../assets/img/White-Desk-Simple-Background-Image-.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-attachment: fixed;
+			width: 100%;
+			height: 70%;
+		}
+
+		img {
+			width: 5%;
+			border-radius: 60%;
+			right: 0px;
+			position: absolute;
+			top: 0;
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+
+	<a href="login.html"><img src="../assets/img/login-icon.png"></a>
+	<div>
+		<h1>Welcome</h1>
+		<form onsubmit="submitHandler()">
+			<input class="value" type="text" placeholder="User name" required id="name"><br>
+			<input class="value" type="text" placeholder="Email ID" required id="mail"><br>
+			<input class="value" type="password" placeholder="Password" maxlength="8" required id="password"><br>
+			<input class="value" type="password" placeholder="confirm Password" maxlength="8" required
+				id="cpassword"><br>
+			<input id="button" type="submit" placeholder="Register" value="Register now" required>
+			<div id="div"></div>
+		</form>
+	</div>
+	<script>
+
+		let userlist = [];
+
+		function submitHandler() {
+			event.preventDefault();
+			let name = document.getElementById("name").value;
+			let mail = document.getElementById("mail").value;
+			let password = document.getElementById("password").value;
+			let cpassword = document.getElementById("cpassword").value;
+
+			let value = {
+				"name": name,
+				"email": mail,
+				"password": password,
+				"confirm password": cpassword
+			}
+
+			const isEmailExist = isEmailExist(mail);
+
+			if (isEmailExist) {
+				alert("This Email Already Exist");
+				return;
+			}
+
+			if (password == cpassword) {
+				userlist.push(value);
 				let value1 = JSON.stringify(userlist);
-				localStorage.setItem("list",value1);
-				
-				
-				
-				
-				for(let i = 0;  i < userlist.length; i++){
-					const 
-				
-					if(array[i].email == mail){
-						document.getElementById("div").innerHTML = "this email already exist ";
-						return;
-					}
-					else{
-						window.location.href = "login.html";
-					}
-					
-				}
-				if(password == cpassword){
-					window.location.href = "login.html";
-				}
-				
-				else{
-					document.getElementById("div").innerHTML =("incorrect password");
-				}
-				
-				
+				localStorage.setItem("list", value1);
+				window.location.href = "login.html";
 			}
-			
-			
-			
-			// this function will return true or false
-			// this function will take an email as input
-			function isEmailExist( email ){
-				
-				const userListInString = localStorage.getItem("list");
-				const userList = JSON.parse(userListInString);
-				
-				
-					
-				
+			else {
+				document.getElementById("div").innerText = "incorrect password";
 			}
-			
-		</script>
-	</body>
-<html>
+
+		}
+
+
+		// this function will return true or false
+		// this function will take an email as input
+		function isEmailExist(inputEmail) {
+			let isExist = false;
+			const userListInString = localStorage.getItem("list");
+			const userList = JSON.parse(userListInString);
+			const len = userList.length;
+
+			for (let i = 0; i < len; i++) {
+				const user = userList[i];
+				const email = user.email;
+				const password = user.password;
+
+				if (inputEmail == email) {
+					isExist = true;
+					break;
+				}
+
+			}
+
+			return isExist;
+
+		}
+
+	</script>
+
+</body>
+
+</html>
