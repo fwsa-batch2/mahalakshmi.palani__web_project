@@ -66,21 +66,24 @@
 		
 		<div id = "div1">
 			<h1>Login</h1>
-			<form>
-				<input type = "text" placeholder = "Full name" class = "input1" required>
-				<input type = "text" placeholder = "Email" class = "input1"required>
-				<input type = "text" placeholder = "Phone number" class = "input1"required>
-				<input type = "password" placeholder = "Password" class = "input1"required>
-				<input type="checkbox" id="input3"  onclick = "password()" ><lable>Show password</lable><br>
-				<br>
-				<input type = "button" value = "Submit" id = "input2" onclick = "massage()">
+			<form action="Home_page.html" onsubmit = "login()">
+				<input type = "text" placeholder = "Full name" class = "input1" required id = "name">
+				<input type = "text" placeholder = "Email" class = "input1"required id = "mail">
+				<!--<input type = "text" placeholder = "Phone number" class = "input1" required maxlength="10" id >-->
+				<!--<input type = "password" placeholder = "Password" class = "input1"required maxlength="10" >-->
+				<!--<input type="checkbox" id="input3"  onclick = "password()" ><lable>Show password</lable><br>-->
+				<input type="submit" value = "Submit" id = "input2" ></input>
 				
 			</form>
 		</div>
 		<script>
-			function massage(){
-				alert("Thank you! your account successfully created");
+			function login(){
+				let name = document.getElementById("name").value;
+				let mail = document.getElementById("mail").value;
 			}
+			//function message(){
+			//	alert("Thank you! your account successfully created");
+			//}
 			
 		</script>
 	</body>

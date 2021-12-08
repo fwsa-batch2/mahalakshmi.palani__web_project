@@ -35,20 +35,97 @@
 				background-repeat :no-repeat;
 				background-size:100%;
 				background-attachment: fixed;
+				width: 100%;
+				height: 70%;
+			}
+			img {
+				width :5%;
+				border-radius: 60%;
+				right:0px;
+				position:absolute;
+				top:0;
+				
+				
 			}
 			
 		</style>
 	</head>
 	<body>
+		<a href = "login.html"><img src = "../assets/img/login-icon.png"></a>
 		<div>
-			<h1>Create Account</h1>
-			<form>
-				<input class = "value" type = "text" placeholder = "User name" required ><br>
-				<input class = "value" type = "text" placeholder = "Email ID"required ><br>
-				<input class = "value" type = "password" placeholder = "Password" maxlength="8"required ><br>
-				<a href = "login.html"><input id = "button" type = "button" placeholder = "Register" value = "Register now"  required></a>
+			<h1>Welcome</h1>
+			<form onsubmit = "submitHandler()">
+				<input class = "value" type = "text" placeholder = "User name" required  id = "name"><br>
+				<input class = "value" type = "text" placeholder = "Email ID"required id = "mail"><br>
+				<input class = "value" type = "password" placeholder = "Password" maxlength="8"required id = "password" ><br>
+				<input class = "value" type = "password" placeholder = "confirm Password" maxlength="8"required id = "cpassword" ><br>
+				<input id = "button" type = "submit" placeholder = "Register" value = "Register now"  required>
+				<div id = "div"></div>
 			</form>
 		</div>
+		<script>
 		
+			let userlist = [];
+		
+			function submitHandler(){
+				event.preventDefault();
+				//alert("called");
+				let name = document.getElementById("name").value;
+				let mail = document.getElementById("mail").value;
+				let password = document.getElementById("password").value;
+				let cpassword = document.getElementById("cpassword").value;
+				
+				let value = {
+					"name":name,
+					"email":mail,
+					"password":password,
+					"confirm password":cpassword
+				}
+				userlist.push(value);
+
+				let value1 = JSON.stringify(userlist);
+				localStorage.setItem("list",value1);
+				
+				
+				
+				
+				for(let i = 0;  i < userlist.length; i++){
+					const 
+				
+					if(array[i].email == mail){
+						document.getElementById("div").innerHTML = "this email already exist ";
+						return;
+					}
+					else{
+						window.location.href = "login.html";
+					}
+					
+				}
+				if(password == cpassword){
+					window.location.href = "login.html";
+				}
+				
+				else{
+					document.getElementById("div").innerHTML =("incorrect password");
+				}
+				
+				
+			}
+			
+			
+			
+			// this function will return true or false
+			// this function will take an email as input
+			function isEmailExist( email ){
+				
+				const userListInString = localStorage.getItem("list");
+				const userList = JSON.parse(userListInString);
+				
+				
+					
+				
+			}
+			
+		</script>
 	</body>
 <html>
