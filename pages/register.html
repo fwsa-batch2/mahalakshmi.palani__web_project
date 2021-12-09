@@ -16,14 +16,16 @@
 		}
 
 		.value {
-			width: 100%;
+			width: 90%;
 			height: 7%;
 			border: none;
-			border-bottom: 1px solid black;
+			/* border-bottom: 1px solid black; */
+			border: 1px solid black;
 			margin-top: 2%;
 			padding-left: 2%;
 			font-size: 15px;
 			background-color: #dadbd6;
+			margin-left: 1%;
 		}
 
 		#button {
@@ -41,12 +43,12 @@
 		}
 
 		body {
-			background-image: url("./../assets/img/White-Desk-Simple-Background-Image-.jpg");
+			/* background-image: url("./../assets/img/White-Desk-Simple-Background-Image-.jpg"); */
 			background-repeat: no-repeat;
 			background-size: 100%;
 			background-attachment: fixed;
 			width: 100%;
-			height: 70%;
+			height: 100%;
 		}
 
 		img {
@@ -80,6 +82,13 @@
 	<script>
 
 		let userlist = [];
+		function onPageLoad(){
+			let listValue = JSON.parse(localStorage.getItem("list"));
+			if(listValue != null){
+				userlist = listValue;
+			}
+		}
+		onPageLoad();
 
 		function submitHandler() {
 			event.preventDefault();
@@ -87,29 +96,25 @@
 			let mail = document.getElementById("mail").value;
 			let password = document.getElementById("password").value;
 			let cpassword = document.getElementById("cpassword").value;
+			let emailId = isEmailExist(mail);
 
-			let value = {
-				"name": name,
-				"email": mail,
-				"password": password,
-				"confirm password": cpassword
+			if(password != cpassword){
+				alert("password invalid");
 			}
-
-			const isEmailExist = isEmailExist(mail);
-
-			if (isEmailExist) {
-				alert("This Email Already Exist");
-				return;
-			}
-
-			if (password == cpassword) {
+			else if(emailId){
+				alert("this email already exist");
+			} 
+			else{
+				let value = {
+					"name": name,
+					"email": mail,
+					"password": password,
+					"confirm password": cpassword
+				}
 				userlist.push(value);
 				let value1 = JSON.stringify(userlist);
 				localStorage.setItem("list", value1);
 				window.location.href = "login.html";
-			}
-			else {
-				document.getElementById("div").innerText = "incorrect password";
 			}
 
 		}
@@ -119,24 +124,13 @@
 		// this function will take an email as input
 		function isEmailExist(inputEmail) {
 			let isExist = false;
-			const userListInString = localStorage.getItem("list");
-			const userList = JSON.parse(userListInString);
-			const len = userList.length;
-
-			for (let i = 0; i < len; i++) {
-				const user = userList[i];
-				const email = user.email;
-				const password = user.password;
-
-				if (inputEmail == email) {
+			for (let i = 0; i < userlist.length; i++) {
+				if (inputEmail == userlist[i].email) {
 					isExist = true;
 					break;
 				}
-
 			}
-
 			return isExist;
-
 		}
 
 	</script>
