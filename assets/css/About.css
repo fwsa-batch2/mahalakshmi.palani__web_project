@@ -3,20 +3,18 @@
 	height:60%;
 	margin:auto;
 	margin-top:5%;
-	//box-shadow: 0px 0px 3px black;
-	//overflow:hidden;
+	/* box-shadow: 0px 0px 3px black; */
 }
 #parent2{
 	width:80%;
 	height:60%;
 	margin:auto;
-	//margin-top:5%;
-	//box-shadow: 0px 0px 3px black;
+	
+	
 }
 #child1{
 	width:50%;
 	height:100%;
-	//border:1px solid black;
 	box-sizing:border-box;
 	float:left;
  	background-color:white;
@@ -26,7 +24,6 @@
 #child2{
 	width:50%;
 	height:100%;
-	//border:1px solid black;
 	float:left;
 	position: relative;
 	background-color:white;
@@ -37,7 +34,6 @@
 #child3{
 	width:50%;
 	height:100%;
-	//border:1px solid black;
 	box-sizing:border-box;
 	float:left;
  	background-color:white;
@@ -47,7 +43,6 @@
 #child4{
 	width:50%;
 	height:100%;
-	//border:1px solid black;
 	float:left;
 	position: relative;
 	background-color:white;
@@ -56,7 +51,6 @@
 }
 body{
 	margin:0;
-	//background-image:url("../assets/img/Diabetes-Superfoods-min.jpg");
 	background-repeat :no-repeat;
 	background-size:100%;
 	background-attachment: fixed;
@@ -92,8 +86,8 @@ body{
 	margin:0;
 	position: absolute;
 	top: 9;
-	right: 106px;
-	font-size: 60px;
+	right: 70px;
+	font-size: 40px;
 	font-family: 'Dancing Script', cursive;
 }
 #head2{
@@ -103,7 +97,6 @@ body{
 	font-family: 'Dancing Script', cursive;
 	font-size:40px;
 	left:35%;
-	//text-align:center;
 	margin-top: 5%;
 }
 #head3{
@@ -113,14 +106,14 @@ body{
 	font-family: 'Dancing Script', cursive;
 	font-size:40px;
 	left:15%;
-	//text-align:center;
 }
 #head1{
-	left:45%;
+	 left:25%; 
 	font-family: 'Dancing Script', cursive;
 	font-size:50px;
 	position:absolute;
 	top:10%;
+	margin: auto;
 }
 
 body{
@@ -162,17 +155,18 @@ li{
 ul{
 	margin:0;
 	position: absolute;
-	top:35;
+	top:10;
 	
 }
+
 
 li:hover{
 	background-color:white;
 	color:black;
 }
 #logo{
-	height:90px;
-	width:90px;
+	height:60px;
+	width:60px;
 	position: absolute;
 	right:0;
 	border-radius:50px;
