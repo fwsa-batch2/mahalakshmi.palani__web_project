@@ -1,90 +1,74 @@
-<html>
-	<head>
-		<style>
-			#div1{
-				border:3px solid white;
-				width:30%;
-				background-color:#475b6d;
-				height:60%;
-				//position:relative;
-				margin:auto;
-				border:1px solid black;
-				margin-top:10%;
-			}
-			.input1{
-				height:70px;
-				width:80%;
-				border:none;
-				border-bottom:1px solid black;
-				margin-left:47px;
-				margin-top:3%;
-				background-color:white;
-				border:none;
-				border-bottom:1px solid black;
-				color: black;
-				font-size: 18px;
-				padding-left:5px;
-			}
-			#input2{
-				height:65px;
-				width:26%;
-				left:38%;
-				background-color:white;
-				border:1px solid white;
-				font-size:20px;
-				position:absolute;
-				top: 110%;
-			}
-			.background{
-				
-				background-image:url("../assets/img/Simple-Minimalist-Background-Image.jpg");
-				background-repeat :no-repeat;
-				background-size:cover;
-				background-attachment: fixed;
-			}
-			h1{
-				color:white;
-				text-align:center;
-			}
-			form{
-				position:relative;
-			}
-			#input3{
-				position:absolute;
-				bottom:-4%;
-				left:10%;
-			}
-			lable{
-				position:absolute;
-				top:100%;
-				left:18%;
-				color:white;
-			}
-		</style>
-	</head>
-	<body class="background">
-		
-		<div id = "div1">
-			<h1>Login</h1>
-			<form action="Home_page.html" onsubmit = "login()">
-				<input type = "text" placeholder = "Full name" class = "input1" required id = "name">
-				<input type = "text" placeholder = "Email" class = "input1"required id = "mail">
-				<!--<input type = "text" placeholder = "Phone number" class = "input1" required maxlength="10" id >-->
-				<!--<input type = "password" placeholder = "Password" class = "input1"required maxlength="10" >-->
-				<!--<input type="checkbox" id="input3"  onclick = "password()" ><lable>Show password</lable><br>-->
-				<input type="submit" value = "Submit" id = "input2" ></input>
-				
-			</form>
-		</div>
-		<script>
-			function login(){
-				let name = document.getElementById("name").value;
-				let mail = document.getElementById("mail").value;
-			}
-			//function message(){
-			//	alert("Thank you! your account successfully created");
-			//}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#div1{
+			height: 300px;
+    		width: 320px;
+			border: 1px solid black;
+			margin: auto;
+			margin-top: 10%;
+			background-color: white;
+			box-shadow: 0 0 10px;
+		}
+		body { 
+			background-image: url("./../assets/img/16692.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-attachment: fixed; 
+			width: 100%;
+			height: 100%;
+		}
+		h1 {
+			text-align: center;
+		}
+		p{
+			margin-left: 58px;
+    		margin-bottom: 7px;
 			
-		</script>
-	</body>
+		}
+		.input1{
+			margin-left:17%;
+			height: 23px;
+			width: 65%;
+			border: 1px solid cadetblue;;
+		}
+		#input2{
+			margin-left:22%;
+			height:35px;
+			margin-top: 7%;
+			width: 170px;
+			background-color: #012031db;
+			border: 1px solid #012031db;
+		}
+		
+	</style>
+</head>
+<body class="background">
+	<div id = "div1">
+		<h1>Login</h1>
+		<form action="Home_page.html" onsubmit = "login()">
+			<p>Name:</p>
+			<input type = "text" placeholder = "Full name" class = "input1" required id = "name">
+			<p>Email:</p>
+			<input type = "text" placeholder = "Email" class = "input1"required id = "mail"><br>
+			<input type="submit" value = "Submit" id = "input2" ></input>
+			
+		</form>
+	</div>
+	<script>
+		function login(){
+			let name = document.getElementById("name").value;
+			let mail = document.getElementById("mail").value;
+		}
+		
+		
+	</script>
+</body>
 </html>
+
+

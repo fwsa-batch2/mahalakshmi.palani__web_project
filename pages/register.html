@@ -10,13 +10,13 @@
 	<style>
 		#home {
 			width: 30%;
-			border: 1px solid #468bec;
 			height:400px;
 			margin: auto; 
 			margin-top:6%; 
 			box-shadow: 0 0 10px;
 			position: relative;
 			background-color: white;
+			padding-top: 1px;
 		}
 
 		.value {
@@ -24,11 +24,10 @@
 			height: 25px;
 			border: none;
 			/* border-bottom: 1px solid black; */
-			border: 1px solid black;
+			border: 1px solid cadetblue;
 			margin-top: 2%;
 			padding-left: 2%;
 			font-size: 14px;
-			background-color: #dadbd6;
 			margin-left: 15%;
 		}
 
@@ -38,9 +37,9 @@
 			margin-top: 2%;
 			margin-left: 25%;
 			font-size: 14px;
-			background-color: #6495ed5e;
-			border: 1px solid #6495ed5e;;
-			box-shadow: 0 0 10px;
+			background-color: #012031db;
+			border: 1px solid #012031db;
+			/* box-shadow: 0 0 10px; */
 			margin-top: 7%;
 		}
 
@@ -49,24 +48,16 @@
 		}
 
 		 body { 
-			background-image: url("./../assets/img/blue-1273089_1280.jpg");
+			background-image: url("./../assets/img/16692.jpg");
 			background-repeat: no-repeat;
 			background-size: 100%;
 			background-attachment: fixed; 
 			width: 100%;
 			height: 100%;
 		}
-
-		img {
-			width: 5%;
-			border-radius: 60%;
-			right: 0px;
-			position: absolute;
-			top: 0;
-		}
 		#checkbox{
 			position: absolute;
-    		left: 13%;
+    		left: 14%;
 			margin-top: 3%;
 		}
 	</style>
@@ -77,11 +68,11 @@
 
 <body>
 
-	<a href="login.html"><img src="../assets/img/login-icon.png"></a>
+
 	<div id = "home">
 		<h1>Welcome</h1>
 		<form onsubmit="submitHandler()">
-			<input class="value" type="text" placeholder="User name" required id="name" pattern="[A-Za-z]{3}" title = "please give me 3 character"><br>
+			<input class="value" type="text" placeholder="User name" required id="name" pattern="[A-Za-z]{3}"><br>
 			<input class="value" type="text" placeholder="Email ID" required id="mail"><br>
 			<input class="value" type="password" placeholder="Password" maxlength="8" required id="checkpassword"><br>
 			<input class="value" type="password" placeholder="confirm Password" maxlength="8" required
