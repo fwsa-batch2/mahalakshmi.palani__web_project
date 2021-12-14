@@ -60,6 +60,18 @@
     		left: 14%;
 			margin-top: 3%;
 		}
+		#text1{
+			/* border: 1px solid #012031db; */
+			margin-left: 15%;
+			margin-top: 1%;
+			color: red;
+		}
+		#text2{
+			/* border: 1px solid #012031db;  */
+			margin-left: 15%;
+			margin-top: 1%;
+			color: red;
+		}
 	</style>
 
 
@@ -72,11 +84,13 @@
 	<div id = "home">
 		<h1>Welcome</h1>
 		<form onsubmit="submitHandler()">
-			<input class="value" type="text" placeholder="User name" required id="name" pattern="[A-Za-z]{3}"><br>
+			<input class="value" type="text" placeholder="User name" required id="name" ><br>
 			<input class="value" type="text" placeholder="Email ID" required id="mail"><br>
+			<div id = "text1"></div>
 			<input class="value" type="password" placeholder="Password" maxlength="8" required id="checkpassword"><br>
 			<input class="value" type="password" placeholder="confirm Password" maxlength="8" required
 				id="cpassword"><br>
+			<div id = "text2"></div>
 			<input type = "checkbox"  id = "checkbox" onclick="showPassword()">
 			<input id="button" type="submit" placeholder="Register" value="Register now" required>
 			
@@ -108,16 +122,18 @@
 		function submitHandler() {
 			event.preventDefault();
 			let name = document.getElementById("name").value;
-			let mail = document.getElementById("mail").value.toLowerCase();
-			let password = document.getElementById("password").value;
+			let mail = document.getElementById("mail").value;
+			let password = document.getElementById("checkpassword").value;
 			let cpassword = document.getElementById("cpassword").value;
 			let emailId = isEmailExist(mail);
 
 			if(password != cpassword){
-				alert("password invalid");
+				//alert("password invalid");
+				document.getElementById("text2").innerText = "password invalid";
 			}
 			else if(emailId){
-				alert("this email already exist");
+				//alert("this email already exist");
+				document.getElementById("text1").innerText = "this email already exist";
 			} 
 			else{
 				let value = {

@@ -7,13 +7,14 @@
 	<title>Document</title>
 	<style>
 		#div1{
-			height: 300px;
+			height: 350px;
     		width: 320px;
 			border: 1px solid black;
 			margin: auto;
 			margin-top: 10%;
 			background-color: white;
 			box-shadow: 0 0 10px;
+			position: relative;
 		}
 		body { 
 			background-image: url("./../assets/img/16692.jpg");
@@ -45,29 +46,79 @@
 			background-color: #012031db;
 			border: 1px solid #012031db;
 		}
-		
+		#text{
+			/* border: 1px solid #012031db; */
+			margin-left: 17%;
+			margin-top: 1%;
+			color: red;
+		}
+		#checkbox{
+			position: absolute;
+    		left: 16%;
+			margin-top: 3%;
+		}
 	</style>
 </head>
 <body class="background">
 	<div id = "div1">
 		<h1>Login</h1>
-		<form action="Home_page.html" onsubmit = "login()">
+		<form  onsubmit = "login()">
 			<p>Name:</p>
 			<input type = "text" placeholder = "Full name" class = "input1" required id = "name">
 			<p>Email:</p>
 			<input type = "text" placeholder = "Email" class = "input1"required id = "mail"><br>
+			<div id = "text"></div>	
+			<p>Password:</p>
+			<input class="input1" type="password" placeholder="Password" maxlength="8" required id="checkpassword"><br>	
+			<input type = "checkbox"  id = "checkbox" onclick="showPassword()">	
 			<input type="submit" value = "Submit" id = "input2" ></input>
 			
 		</form>
 	</div>
 	<script>
-		function login(){
-			let name = document.getElementById("name").value;
-			let mail = document.getElementById("mail").value;
+		function showPassword(){
+			let check1 = document.getElementById("checkpassword");
+			if(check1.type === "password"){
+				check1.type = "text";
+			}
 		}
-		
-		
+		function login(){
+			event.preventDefault();
+			let currentName = document.getElementById("name").value;
+			let currentMail = document.getElementById("mail").value;
+			let currentPassword = document.getElementById("checkpassword").value;
+			let userDetail = JSON.parse(localStorage.getItem("list"));
+			
+
+			if(userDetail != null){
+				for(i = 0; i < userDetail.length; i++){
+					console.log(userDetail[i].mail);
+					console.log(userDetail[i].name);
+					if(userDetail[i].email == currentMail && userDetail[i].password == currentPassword){
+						window.location.href = "Home_page.html";
+						break;
+					}
+					else{
+						document.getElementById("text").innerText = "enter valid login detail";
+						break;
+					}
+				}
+			}
+			else{
+				alert("please sign up first");
+			}
+		}
+		let userlist = [];
+		function onPageLoad(){
+			let listValue = JSON.parse(localStorage.getItem("list"));
+			userlist.push(listValue);
+			if(listValue != null){
+				userlist = listValue;
+			}
+		}
+		onPageLoad();
 	</script>
+	
 </body>
 </html>
 
