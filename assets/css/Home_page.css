@@ -4,6 +4,7 @@ body{
 #div1{
 	height:10%;
 	width:100%;
+	/* background-color: #012031db; */
 	
 }
 li{
@@ -34,9 +35,14 @@ ul{
 }
 
 li:hover{
-	background-color:#a9a9a99c;
-	color:black;
+	 background-color:#012031db; 
+	color:white;
+	/* background-color: black; */
 }
+a:hover{
+	color:white;
+}
+
 #logo{
 	height:60px;
 	width:60px;
@@ -58,6 +64,7 @@ li:hover{
 	position: absolute;
 	top: 50%;
 	left:25%;
+	color: aliceblue;
 }
 h1{
 	margin:0;
@@ -66,49 +73,55 @@ h1{
 	left:20%;
 	font-family: 'Dancing Script', cursive;
 	font-size: 35px;
+	color: aliceblue;
 }
 #child1{
 	height:90%;
 	width:30%;
 	float:left;
 	/* border:1px solid black; */
-	background-color:#a9a9a99c;
+	background-color: #012031db;
 	position:relative;
+	box-shadow: 0 0 10px; 
 }
 #child2{
 	height:90%;
 	width:70%;
 	/* border:1px solid black; */
 	float:left;
-	background-image:url("./../img/photo-1453614512568-c4024d13c247.jpeg");
-	background-repeat :no-repeat;
-	background-size:100%;
-	background-attachment: fixed;
+	box-shadow: 0 0 10px;
+	/* background-image:url("./../img/pexels-rachel-claire-5490933.jpg"); */
+	 /* background-repeat :no-repeat;  */
+	/* background-size:cover;  */
+	/* background-attachment: fixed; */
 }
-
+img{
+	width: 100%;
+	height: 100%;
+}
 #button1{
 	width: 30%;
-	height: 5%;
+	height: 6%;
 	position: absolute;
 	top: 60%;
 	right:15%;
 	/* border-radius:20%; */
-	background-color: darkgray;
-	border:1px solid black;
-	box-shadow: 0px 0px 3px black;
+	/* background-color: darkgray; */
+	/* border:1px solid black; */
+	box-shadow: 0px 0px 10px black;
 	font-size:15px;
 	
 }
 #button2{
 	width: 30%;
-	height: 5%;
+	height: 6%;
 	position: absolute;
 	top: 60%;
 	left:15%;
 	/* border-radius:20%; */
-	background-color: darkgray;
-	border:1px solid black;
-	box-shadow: 0px 0px 3px black;
+	/* background-color: darkgray; */
+	/* border:1px solid black; */
+	box-shadow: 0px 0px 10px black;
 	font-size:15px;
 	
 }

@@ -59,25 +59,27 @@ body{
 	width:90%;
 	height:64%;
 	margin-top:20%;
-	
+	box-shadow: 0 0 10px;
 	
 }
 #img2{
 	width:90%;
 	height:64%;
 	margin-top:20%;
+	margin-left: 10%;
+	box-shadow: 0 0 10px;
 	
 }
 
 #para2{
-	font-size:30px;
+	font-size:25px;
 	font-family: 'Dancing Script', cursive;
 	position:absolute;
 	top:36%;
 	
 }
 #para3{
-	font-size:30px;
+	font-size:25px;
 	font-family: 'Dancing Script', cursive;
 	position:absolute;
 	top:36%;
@@ -92,28 +94,29 @@ body{
 }
 #head2{
 	position:absolute;
-	top:25%;
+	top:20%;
 	color:#8F8F8F;
 	font-family: 'Dancing Script', cursive;
-	font-size:40px;
+	font-size:35px;
 	left:35%;
-	margin-top: 5%;
+	/* margin-top: 5%; */
 }
 #head3{
 	position:absolute;
-	top:25%;
+	top:20%;
 	color:#8F8F8F;
 	font-family: 'Dancing Script', cursive;
-	font-size:40px;
-	left:15%;
+	font-size:33px;
+	/* left:5%; */
 }
 #head1{
-	 left:25%; 
+	 /* left:25%;  */
 	font-family: 'Dancing Script', cursive;
 	font-size:50px;
-	position:absolute;
-	top:10%;
-	margin: auto;
+	/* position:absolute; */
+	/* top:10%; */
+	/* margin: auto; */
+	text-align: center;
 }
 
 body{
@@ -123,57 +126,63 @@ body{
 #img1:hover{
 	opacity: 0.5;
 	transition: 0.5s;
-	transform: scale(1.2 );
+	transform: scale(1.1);
 	
 	
 }
 #img2:hover{
 	opacity: 0.5;
 	transition:0.5s;
-	transform: scale(1.2 );
+	transform: scale(1.1);
 	
 	
 }
 #div1{
-	height:10%;
+	height:11%;
 	width:100%;
-	background-color:#8F8F8F;
+	background-color: #012031db;
+	
 }
 li{
+	/* border: 1px solid black; */
 	list-style:none;
-	float:left;
-	margin-right: 50;
-	width:85px;
-	font-size:20px;
-	height: 36;
-	padding-left: 22;
-	padding-top: 10px;
-	padding-right: 13;
+	height: 60%;
+	margin-top: 8%; 
+	margin-left:4%;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 6px;
+	font-size: 20px;
+	
+
+}
+a{
+	text-decoration: none;
 	color:black;
-	
 }
-ul{
-	margin:0;
-	position: absolute;
-	top:10;
-	
-}
-
-
 li:hover{
 	background-color:white;
 	color:black;
-}
-#logo{
-	height:60px;
-	width:60px;
-	position: absolute;
-	right:0;
-	border-radius:50px;
-	top:3px;
 }
 button{
 	width:80%;
 	height:25%;
 	font-size:25px;
+}
+ul{
+	margin:0;
+	position: absolute;
+	height:9%;
+	/* border:1px solid black; */
+	display: flex;
+	width: 60%;
+	
+}
+#logo{
+	height:62px;
+	width:60px;
+	position: absolute;
+	right:0;
+	border-radius:50px;
+	/* top:3px; */
 }
