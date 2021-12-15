@@ -8,7 +8,7 @@
 	<style>
 		#div1{
 			height: 350px;
-    		width: 320px;
+    		width: 330px;
 			border: 1px solid black;
 			margin: auto;
 			margin-top: 10%;
@@ -27,24 +27,27 @@
 		h1 {
 			text-align: center;
 		}
-		p{
+		/* p{ 
 			margin-left: 58px;
     		margin-bottom: 7px;
 			
-		}
+		} */
 		.input1{
 			margin-left:17%;
 			height: 23px;
 			width: 65%;
-			border: 1px solid cadetblue;;
+			border: 1px solid cadetblue;
+			margin-top: 3%;
+
 		}
 		#input2{
 			margin-left:22%;
 			height:35px;
-			margin-top: 7%;
+			margin-top: 10%;
 			width: 170px;
 			background-color: #012031db;
 			border: 1px solid #012031db;
+			color: white;
 		}
 		#text{
 			/* border: 1px solid #012031db; */
@@ -63,12 +66,12 @@
 	<div id = "div1">
 		<h1>Login</h1>
 		<form  onsubmit = "login()">
-			<p>Name:</p>
+			<!-- <p>Name:</p> -->
 			<input type = "text" placeholder = "Full name" class = "input1" required id = "name">
-			<p>Email:</p>
+			<!-- <p>Email:</p> -->
 			<input type = "text" placeholder = "Email" class = "input1"required id = "mail"><br>
 			<div id = "text"></div>	
-			<p>Password:</p>
+			<!-- <p>Password:</p> -->
 			<input class="input1" type="password" placeholder="Password" maxlength="8" required id="checkpassword"><br>	
 			<input type = "checkbox"  id = "checkbox" onclick="showPassword()">	
 			<input type="submit" value = "Submit" id = "input2" ></input>

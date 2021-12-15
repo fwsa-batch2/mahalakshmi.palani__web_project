@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+	        margin:0;
+        }
+        #div1{
+            height:61px;
+            width:100%;
+            background-color: #012031db; 
+        
+        }
+        li{
+            /* border: 1px solid black; */
+            list-style:none;
+            height: 60%;
+            margin-top: 1%; 
+            margin-left:4%;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 6px;
+            font-size: 20px;
+            
+
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        ul{
+            margin:0;
+            position: absolute;
+            height:9%;
+            /* border:1px solid black; */
+            display: flex;
+            width: 60%;
+            
+        }
+
+        li:hover{
+            background-color:#012031db; 
+            color:white;
+            /* background-color: black; */
+        }
+        a:hover{
+            color:white;
+        }
+
+        #logo{
+            height:60px;
+            width:60px;
+            position: absolute;
+            right:0;
+            border-radius:50px;
+            /* top:3px; */
+        }
+        #para1{
+            margin:0;
+            position: absolute;
+            /* top: 9; */
+            right: 70px;
+            font-size: 40px;
+            font-family: 'Dancing Script', cursive;
+         }
+         .img-add{
+             width: 350px;
+             height: 350px;
+             border: 1px solid #012031db;
+             float: left;
+             margin-left: 100px;
+             margin-top: 30px;
+         }
+         #home{
+            /* border: 1px solid black; */
+            width: 80%;
+            margin: auto;
+            height: 910px;
+           
+         }
+         #head2{
+             position: absolute;
+             top:96%;
+             margin-left: 8%;
+             color: #012031db;
+         }
+         #head1{
+            margin-left: 10%;
+            margin-top: 5%;
+            color: #012031db;
+         }
+         #img-div3{
+             margin-top: 100px;
+         }
+         #img-div4{
+             margin-top: 100px;
+         }
+         .foodimg{
+             width:80%;
+             height: 70%;
+             margin-left: 10%;
+             margin-top: 5%;
+            
+         }
+         p{
+             width: 15%;
+             float: left;
+             margin-left: 25%;
+         }
+         button{
+            margin-top: 4%;
+            margin-left: 5%;
+            background-color: #012031db;
+         }
+         h2{
+             margin: 0;
+             margin-left: 8%;
+         }
+    </style>
+</head>
+<body>
+    <div id="div1">
+		<ul>
+			<li>
+				<a href="./index.html">
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="About.html">
+					About
+				</a>
+			</li>
+			<li>
+				<a href="menu.html">
+					Menu
+				</a>
+			</li>
+			<li>
+				<a href="Contact.html">
+					Contact
+				</a>
+			</li>
+			<li>
+				<a href="review.html">
+					Review
+				</a>
+			</li>
+
+
+		</ul>
+		<img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png">
+		<p id="para1">Klassy</p>
+	</div>
+    <div id = "home">
+        <h3 id = "head1"> Recommented for you </h3>
+        <div id = "img-div1" class = "img-add">
+            <h2>Tikka Masala</h2>
+            <img src="../assets/img/shutterstock_620407940-1024x683.jpg" class = "foodimg" alt="">
+            <p> Rs.124</p><button>ADD CARD</button>
+        </div>
+
+        <div id = "img-div2" class = "img-add">
+            <h2>Paneer Cheese</h2>
+            <img src="../assets/img/Matar-Paneer-Peas-and-Cooked-Cottage-Cheese.jpg" class = "foodimg" alt="">
+            <p> Rs.124</p><button>ADD CARD</button>
+        </div>
+
+        <h3 id = "head2">Today's special</h3>
+        <div id = "img-div3" class = "img-add">
+            <h2>masala dosa</h2>
+            <img src="../assets/img/masala-dosa-shutterstock_785766178_c75e543a17.jpeg" class = "foodimg" alt="">
+            <p> Rs.124</p><button>ADD CARD</button>
+        </div>
+
+        <div id = "img-div4" class = "img-add">
+            <h2>Samosa</h2>
+            <img src="../assets/img/samosas-and-bhajis.jpg" class = "foodimg" alt="">
+            <p> Rs.124</p><button>ADD CARD</button>
+        </div>
+    </div>
+</body>
+</html>
