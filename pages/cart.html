@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cart</h1>
+    <script>
+       function renderFood(addItems){
+            let len = addItems.length;
+            let add = "";
+            for(let i = 0; i < len; i++){
+                let obj = addItems[i];
+                let food = `<div id = "img-div2" class = "img-add">
+                                 <h2> ${obj.fname}</h2>
+                                <img src=${obj.img} class = "foodimg" alt="">
+                                <p> RS.${obj.price}</p>
+                            </div>`;
+                add = add+food;
+            }
+            document.getElementById("addmenu").innerHTML = add;
+        }
+        let getValue = JSON.parse(localStorage.getItem("list"));
+        renderFood(getValue);
+    </script>
+</body>
+</html>

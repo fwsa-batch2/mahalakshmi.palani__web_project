@@ -95,15 +95,15 @@
 
 			if(userDetail != null){
 				for(i = 0; i < userDetail.length; i++){
-					console.log(userDetail[i].mail);
-					console.log(userDetail[i].name);
+					console.log(i);
+					console.log(userDetail[i]);
 					if(userDetail[i].email == currentMail && userDetail[i].password == currentPassword){
 						window.location.href = "Home_page.html";
 						break;
 					}
 					else{
 						document.getElementById("text").innerText = "enter valid login detail";
-						break;
+						
 					}
 				}
 			}

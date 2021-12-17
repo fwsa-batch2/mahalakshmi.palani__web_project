@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #home{
+            border: 1px solid black;
+            width: 25%;
+           
+            margin: auto;
+            margin-top: 12%;
+            height: 300px;
+            box-shadow: 0 0 10px;
+
+        }
+        .input1{
+            margin-left: 17%;
+            height: 20px;
+            width: 200px;
+        }
+        button{
+            margin-left: 40%;
+        }
+        p{
+            margin-left: 17%;
+            color: white;
+        }
+        body{
+             background-image: url("../assets/img/Simple-Minimalist-Background-Image.jpg");
+             background-repeat: no-repeat;
+             background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id = "home">
+        <form onsubmit="submitHandler()">
+            <p>Foodname:</p>
+			<input type = "text"  class = "input1"  required id = "name">
+			<p>image url</p> 
+			<input type = "text"  class = "input1" required id = "url"><br>	
+			<p>price:</p> 
+			<input class="input1" type="text"  required id="price"><br>	
+            <br>
+           <button type="submit">submit</button>
+		</form>	
+    </div>
+    <script>
+        let foodList = []
+        function onPageLoad(){
+			let listValue = JSON.parse(localStorage.getItem("list"));
+			if(listValue != null){
+				foodList = listValue;
+			}
+		}
+		onPageLoad();
+        function submitHandler(){
+            let name = document.getElementById("name").value;
+            let img = document.getElementById("url").value;
+            let price = document.getElementById("price").value;
+            console.log(name);
+            let foodOPJ = {
+                "fname":name,
+                "img":img,
+                "price":price
+
+            }
+
+            foodList.push(foodOPJ);
+            console.log(foodList);
+			let value = JSON.stringify(foodList);
+			localStorage.setItem("list", value);
+        }
+    </script>
+</body>
+</html>

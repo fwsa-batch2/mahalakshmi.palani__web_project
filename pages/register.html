@@ -85,7 +85,7 @@
 	<div id = "home">
 		<h1>Welcome</h1>
 		<form onsubmit="submitHandler()">
-			<input class="value" type="text" placeholder="User name" required id="name" ><br>
+			<input class="value" type="text" placeholder="User name" required id="name"  pattern="[A-Za-z]{3,16}" title="minimum 3 char maximum 16 char"><br>
 			<input class="value" type="text" placeholder="Email ID" required id="mail"><br>
 			<div id = "text1"></div>
 			<input class="value" type="password" placeholder="Password" maxlength="8" required id="checkpassword"><br>
@@ -127,7 +127,6 @@
 			let password = document.getElementById("checkpassword").value;
 			let cpassword = document.getElementById("cpassword").value;
 			let emailId = isEmailExist(mail);
-
 			if(password != cpassword){
 				//alert("password invalid");
 				document.getElementById("text2").innerText = "password invalid";
@@ -143,6 +142,7 @@
 					"password": password,
 					"confirm password": cpassword
 				}
+				
 				userlist.push(value);
 				let value1 = JSON.stringify(userlist);
 				localStorage.setItem("list", value1);
@@ -155,6 +155,7 @@
 		// this function will return true or false
 		// this function will take an email as input
 		function isEmailExist(inputEmail) {
+			console.group(isEmailExist)
 			let isExist = false;
 			for (let i = 0; i < userlist.length; i++) {
 				if (inputEmail == userlist[i].email) {
@@ -162,6 +163,7 @@
 					break;
 				}
 			}
+			console.groupEnd(isEmailExist)
 			return isExist;
 		}
 
