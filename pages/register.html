@@ -86,9 +86,9 @@
 		<h1>Welcome</h1>
 		<form onsubmit="submitHandler()">
 			<input class="value" type="text" placeholder="User name" required id="name"  pattern="[A-Za-z]{3,16}" title="minimum 3 char maximum 16 char"><br>
-			<input class="value" type="text" placeholder="Email ID" required id="mail"><br>
+			<input class="value" type="text" placeholder="Email ID" required id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "please include an '@' in the email address"><br>
 			<div id = "text1"></div>
-			<input class="value" type="password" placeholder="Password" maxlength="8" required id="checkpassword"><br>
+			<input class="value" type="password" placeholder="Password" maxlength="8" required id="checkpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters "> <br>
 			<input class="value" type="password" placeholder="confirm Password" maxlength="8" required
 				id="cpassword"><br>
 			<div id = "text2"></div>
@@ -172,4 +172,9 @@
 </body>
 
 </html>
+
+
+
+
+
 

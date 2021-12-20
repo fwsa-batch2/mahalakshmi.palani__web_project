@@ -9,7 +9,6 @@
         #home{
             border: 1px solid black;
             width: 25%;
-           
             margin: auto;
             margin-top: 12%;
             height: 300px;
@@ -58,6 +57,7 @@
 		}
 		onPageLoad();
         function submitHandler(){
+            event.preventDefault();
             let name = document.getElementById("name").value;
             let img = document.getElementById("url").value;
             let price = document.getElementById("price").value;

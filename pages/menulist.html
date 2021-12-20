@@ -125,6 +125,7 @@
             margin-top: 4%;
             margin-left: 5%;
             background-color: #012031db;
+            color: white;
          }
          h2{
              margin: 0;
@@ -231,13 +232,14 @@
        
         let userlist = [];
 		function onPageLoad(){
-			let listValue = JSON.parse(localStorage.getItem("addlist"));
+			let listValue = JSON.parse(localStorage.getItem("list"))// null 
+
 			if(listValue != null){
 				userlist = listValue;
 			}
-            else{
+            else{ // listvalue = null;
                 userlist = [];
-                localStorage.setItem("addlist",JSON.stringify(listValue));
+                localStorage.setItem("list",JSON.stringify(userlist));
             }
             return userlist;
 		}
