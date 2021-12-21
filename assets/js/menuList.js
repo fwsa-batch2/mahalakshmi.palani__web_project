@@ -22,7 +22,7 @@ function renderFood(addItems){
         let food = `<div id = "img-div2" class = "img-add">
                          <h2> ${obj.fname}</h2>
                         <img src=${obj.img} class = "foodimg" alt="">
-                        <p> RS.${obj.price}</p><button type = "button" onclick = "clickHandler(${obj})">ADD CART</button>
+                        <p> RS.${obj.price}</p><button type = "button" onclick = "clickHandler()">ADD CART</button>
                     </div>`;
         add +=food;
     }
