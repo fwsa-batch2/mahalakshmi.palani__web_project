@@ -76,6 +76,7 @@ body{
 	font-family: 'Dancing Script', cursive;
 	position:absolute;
 	top:36%;
+	text-align: center;
 	
 }
 #para3{
@@ -83,6 +84,7 @@ body{
 	font-family: 'Dancing Script', cursive;
 	position:absolute;
 	top:36%;
+	text-align: center;
 }
 #para1{
 	margin:0;
@@ -113,9 +115,6 @@ body{
 	 /* left:25%;  */
 	font-family: 'Dancing Script', cursive;
 	font-size:50px;
-	/* position:absolute; */
-	/* top:10%; */
-	/* margin: auto; */
 	text-align: center;
 }
 
