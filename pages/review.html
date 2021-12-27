@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #home{
+        border: 1px solid black;
+         width: 40%;
+		 height: 300px;
+        margin: auto;
+        /* margin-top: 5%; */ 
+
+    }
+	.para{
+		margin: 0;
+		width: 50px;
+		float: left;
+		margin-top: 5%;
+		margin-left: 1%;
+	}
+	.input{
+		height: 25px;
+		margin-top: 5%;
+		margin-left: 9%;
+	}
+	
+    #addbutton{
+        margin-top: 5%;
+        margin-left: 20%;
+
+    }
+    #newTask{
+        width: 50%;
+        height: 45px;
+        margin-left: 9%;
+		margin-top:5% ;
+    }
+    h1{
+        text-align: center;
+    }
+	.icon{
+		width:30px;
+		float:left;
+		border-radius: 30px;
+	}
+	#parent{
+		width: 50%;
+		/* border: 1px solid black; */
+		margin: auto;
+	}
+	.head1{
+		width:15%;
+		float:left;
+		margin: 0;
+		margin-left: 1%;
+		margin-top: 5px;
+		font-size:20px;
+	}
+	ul{
+		padding: 0;
+	}
+	.para1{
+		margin-top: 2%;
+		/* border: 1px solid black; */
+		/* float:left; */
+	}
+	.head2{
+		/* border: 1px solid black; */
+		width:15%;
+		/* float:left; */
+		margin: 0;
+		 margin-left: 7%; 
+		/* margin-top: 5px; */
+		font-size:20px;
+	}
+	.star{
+		width:70px;
+		float:right;
+		margin-top: 2%;
+	}
+</style>
+<body>
+	<h1>Review</h1>
+	<div id = "home">
+		
+		<form>
+			<p  class = "para">Name</p>
+			<input type="text" id = "name" class = "input"><br>
+			<!-- <p class = "para">Rating</p>
+			<input type="text" id = "rating" class = "input"><br> -->
+			<p  class = "para">Comment</p>
+			<textarea type="text"  id="newTask" placeholder="Enter new Task" required rows="5" cols="55"></textarea><br>
+			<button type="submit" id="addbutton" onclick = "submitHandler()" > Add comment </button>
+			
+		</form>
+	
+	</div>
+	<div id = "parent">
+		<ul id = "unorder"></ul>
+		<div id = "child1">
+			<img class = "icon" src = "../assets/img/login-icon.png" >
+			<h4 class = "head1">Yamuna</h4>
+			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		</div>		
+		<p class = "review">Great happening place mostly for youngster to enjoy with r loved once and friends with cheers drinks and cool attitude of stafff and most important mouth snaking food.</p>
+		<div id = "child2">
+			<img class = "icon" src = "../assets/img/login-icon.png" >
+			<h4 class = "head1">Gowtham</h4>
+			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		</div>
+		<p class = "review">A very happening place with my friends . 
+			Went there in group, its a place to go with friends after work for a drink or to play pool and hangout.
+			 Good music and food</p>
+		<div id = "child3">
+			<img class  = "icon" src = "../assets/img/login-icon.png" >
+			<h4 class = "head1">Madan</h4>
+			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		</div>
+		<p class = "review">First I loved the ambience,
+			 second the surrounding was good and drink is quiet worthy and we spent 
+			 almost 6 hours there the serving team is quiet good responding people. Thank you guys.</p>
+		<div id = "child4">
+			<img class  = "icon" src = "../assets/img/login-icon.png" >
+			<h4 class = "head1">leena</h4>
+			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		</div>
+		<p class = "review">Great place to hangout with friends!! and gave us good recommendations.</p>
+		<div id = "child5">
+			<img class  = "icon" src = "../assets/img/login-icon.png" >
+			<h4 class = "head1">Ram</h4>
+			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		</div>
+		<p class = "review">The food was excellent, generous portions and great prices. The service was fast and friendly.
+			 I highly recommended this place for a perfect drink and dinner . Loads of love to you guys keep rocking </p>
+		
+					
+		</ul>
+	</div>
+    
+    <script>
+		let myArray = [];
+
+		function onPageLoad(){
+			let listValue = JSON.parse(localStorage.getItem("comment"));
+			if(listValue != null){
+				myArray = listValue;
+			}
+			else {
+  
+				myArray = [];
+				localStorage.setItem("comment", JSON.stringify(myArray));
+			}
+		}
+		onPageLoad();
+		function submitHandler(){
+			 event.preventDefault();
+			 let task = document.getElementById("newTask").value;
+			 let name = document.getElementById("name").value;
+			 let obj = {
+				 "name":name,
+				 "cmd":task,
+			 }
+			 myArray.push(obj);
+			//  console.log(task);
+			//  myArray.push(task);
+			//  let order = document.getElementById("unorder");
+			//  order.innerHTML += task+"<br>";
+			 let taskListInString = JSON.stringify(myArray);
+			 localStorage.setItem("comment", taskListInString);
+			 
+			  renderTask();
+			
+		}
+		function renderTask(){
+			let taskInString =  localStorage.getItem("comment");
+			// console.log(taskInString);
+			let taskInArray = JSON.parse(taskInString);
+			// console.log(taskInArray);
+			let noOfTask = taskInArray.length;
+			let num = "";
+			for(let i = 0; i < noOfTask; i++){
+				console.log(taskInArray[i])
+				let review = `<img class = "icon" src = "../assets/img/login-icon.png" ><h4 class = "head2" >${taskInArray[i].name}</h4>
+				<p class = "para1">${taskInArray[i].cmd}</p>`
+				console.log(review);
+				
+				  //const _task = tasksInArray[i];
+				//  let list =  "<li>"+taskInArray[i]+"</li>";
+				//  console.log(list);
+				  num += review;
+			 }
+			  let order = document.getElementById("unorder");
+			  order.innerHTML = num;
+		}
+		renderTask();
+	</script>	
+</body>
+</html>
