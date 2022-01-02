@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Klassy</title>
-
-	
+	<title>Document</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="../assets/css/Home_page.css">  -->
-	<style>
-body{
+	<link rel="stylesheet" href="../assets/css/Home_page.css">
+</head>
+<style>
+	body{
 	margin:0;
-}
-#div2{
-	display: block;
-	height: 500px;
 }
 #div1{
 	height:60px;
 	width:100%;
-	/* border: 1px solid black; */
+	/* background-color: #012031db; */
+	border: 1px solid black;
 	
 }
 li{
@@ -54,9 +49,14 @@ ul{
 }
 
 li:hover{
-	background-color:#a9a9a99c;
-	color:black;
+	 background-color:#012031db; 
+	color:white;
+	/* background-color: black; */
 }
+a:hover{
+	color:white;
+}
+
 #logo{
 	height:60px;
 	width:60px;
@@ -68,7 +68,7 @@ li:hover{
 #para1{
 	margin:0;
 	position: absolute;
-	top: 5;
+	/* top: 9; */
 	right: 70px;
 	font-size: 40px;
 	font-family: 'Dancing Script', cursive;
@@ -78,96 +78,107 @@ li:hover{
 	position: absolute;
 	top: 50%;
 	left:25%;
+	color: aliceblue;
 }
 h1{
 	margin:0;
 	position: absolute;
 	top: 40%;
-	left:10%;
+	left:20%;
 	font-family: 'Dancing Script', cursive;
 	font-size: 35px;
+	color: aliceblue;
 }
 #child1{
-	height:100%;
+	height:500px;
 	width:30%;
 	float:left;
 	/* border:1px solid black; */
-	background-color:#a9a9a99c;
+	background-color: #012031db;
 	position:relative;
+	box-shadow: 0 0 10px; 
 }
 #child2{
-	height:100%;
+	height:500px;
 	width:70%;
 	/* border:1px solid black; */
 	float:left;
-	background-image:url("./assets/img/photo-1453614512568-c4024d13c247.jpeg");
-	background-repeat :no-repeat;
-	background-size:100%;
-	background-attachment: fixed;
+	box-shadow: 0 0 5px;
+	/* background-image:url("./../img/pexels-rachel-claire-5490933.jpg"); */
+	 /* background-repeat :no-repeat;  */
+	/* background-size:cover;  */
+	/* background-attachment: fixed; */
 }
-
-/* #button1{
+img{
+	width: 100%;
+	height: 100%;
+}
+#button1{
 	width: 30%;
-	height: 5%;
+	height: 6%;
 	position: absolute;
 	top: 60%;
 	right:15%;
-	background-color: darkgray;
-	border:1px solid black;
-	box-shadow: 0px 0px 3px black;
-	font-size:20px;
+	border-radius:15%; 
+	/* background-color: darkgray; */
+	/* border:1px solid black; */
+	box-shadow: 0px 0px 10px black;
+	font-size:15px;
+	color: white;
+	background-color: #012031db;
+	border: #012031db;
 	
- } */
+}
 #button2{
 	width: 30%;
-	height: 5%;
+	height: 6%;
 	position: absolute;
 	top: 60%;
-	left:30%;
-	/* border-radius:20%; */
-	background-color: darkgray;
-	border:1px solid black;
-	box-shadow: 0px 0px 3px black;
+	left:15%;
+	border-radius:15%;
+	/* background-color: darkgray; */
+	/* border:1px solid black; */
+	box-shadow: 0px 0px 10px black;
 	font-size:15px;
+	color: white;
+	background-color: #012031db;
+	border: 1px solid #012031db;
 	
 }
 
-	</style>
-	
-</head>
-
+</style>
 <body>
 	<div id="div1">
 		<ul>
 			<li>
-				<a href="./pages/Home_page.html">
+				<a href="Home_page.html">
 					Home
 				</a>
 			</li>
 			<li>
-				<a href="./pages/About.html">
+				<a href="About.html">
 					About
 				</a>
 			</li>
 			<li>
-				<a href="./pages/menu.html">
+				<a href="menulist.html">
 					Menu
 				</a>
 			</li>
 			<li>
-				<a href="./pages/Contact.html">
+				<a href="Contact.html">
 					Contact
 				</a>
 			</li>
 			<li>
-				<a href="./pages/review.html">
+				<a href="review.html">
 					Review
 				</a>
 			</li>
 
 
 		</ul>
-		<img id="logo" src="./assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
+		<img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
 		<p id="para1">Klassy</p>
 	</div>
 	<div id="div2">
@@ -175,14 +186,13 @@ h1{
 			<h1>Klassy Restaurant</h1>
 			<p id="para2">THE BEST EXPERIENCE</p>
 			<div id="login">
-				<!--<a href = "login.html" ><button id = "button1">Login</button></a>-->
+				<a href = "login.html" ><button id = "button1">Login</button></a>
 				<a href="register.html"><button id="button2">Register</button></a>
 			</div>
 		</div>
-		<div id="child2"></div>
+		<div id="child2">
+			<img src="../assets/img/photo-1559339352-11d035aa65de.jfif" alt="homeimg">
+		</div>
 	</div>
-
-
 </body>
-
 </html>

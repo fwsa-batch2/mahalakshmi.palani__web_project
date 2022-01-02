@@ -82,8 +82,113 @@
 		float:right;
 		margin-top: 2%;
 	}
+	.review-div{
+		
+		padding: 1%;
+		margin-top: 1%;
+	}
+	 
+	.review-div:hover{
+		/* border: 1px solid black; */
+		box-shadow: 0 0 10px;
+	}
+	#div1{
+	height:60px;
+	width:101%;
+	/* background-color: #012031db; */
+	/* border: 1px solid black; */
+	background-color:#012031db; 
+	
+}
+li{
+	/* border: 1px solid black; */
+	list-style:none;
+	height: 60%;
+	margin-top: 1%; 
+	margin-left:4%;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 6px;
+	font-size: 20px;
+	
+
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+#nav{
+	margin:0;
+	position: absolute;
+	height:9%;
+	/* border:1px solid black; */
+	display: flex;
+	width: 60%;
+	
+}
+li:hover{
+	 background-color:#012031db; 
+	 
+	/* background-color: black; */
+}
+a:hover{
+	color:white;
+}
+body{
+             /* background-image: url("../assets/img/Simple-Minimalist-Background-Image.jpg");
+             background-repeat: no-repeat;
+             background-size: cover; */
+}
+#logo{
+	height:60px;
+	width:60px;
+	position: absolute;
+	right:0;
+	border-radius:50px;
+	/* top:3px; */
+}
+#para1{
+	margin:0;
+	position: absolute;
+	/* top: 9; */
+	right: 70px;
+	font-size: 40px;
+	font-family: 'Dancing Script', cursive;
+}
 </style>
-<body>
+<div id="div1">
+	<ul id = "nav">
+		<li>
+			<a href="Home_page.html">
+				Home
+			</a>
+		</li>
+		<li>
+			<a href="About.html">
+				About
+			</a>
+		</li>
+		<li>
+			<a href="menulist.html">
+				Menu
+			</a>
+		</li>
+		<li>
+			<a href="Contact.html">
+				Contact
+			</a>
+		</li>
+		<li>
+			<a href="review.html">
+				Review
+			</a>
+		</li>
+
+
+	</ul>
+	<img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
+	<p id="para1">Klassy</p>
+</div>
 	<h1>Review</h1>
 	<div id = "home">
 		
@@ -101,42 +206,51 @@
 	</div>
 	<div id = "parent">
 		<ul id = "unorder"></ul>
-		<div id = "child1">
-			<img class = "icon" src = "../assets/img/login-icon.png" >
-			<h4 class = "head1">Yamuna</h4>
-			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
-		</div>		
-		<p class = "review">Great happening place mostly for youngster to enjoy with r loved once and friends with cheers drinks and cool attitude of stafff and most important mouth snaking food.</p>
-		<div id = "child2">
-			<img class = "icon" src = "../assets/img/login-icon.png" >
-			<h4 class = "head1">Gowtham</h4>
-			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		<div class = "review-div">
+			<div id = "child1">
+				<img class = "icon" src = "../assets/img/login-icon.png" >
+				<h4 class = "head1">Yamuna</h4>
+				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+			</div>		
+			<p class = "review">Great happening place mostly for youngster to enjoy with r loved once and friends with cheers drinks and cool attitude of stafff and most important mouth snaking food.</p>
 		</div>
-		<p class = "review">A very happening place with my friends . 
-			Went there in group, its a place to go with friends after work for a drink or to play pool and hangout.
-			 Good music and food</p>
-		<div id = "child3">
-			<img class  = "icon" src = "../assets/img/login-icon.png" >
-			<h4 class = "head1">Madan</h4>
-			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		<div class = "review-div">
+			<div id = "child2">
+				<img class = "icon" src = "../assets/img/login-icon.png" >
+				<h4 class = "head1">Gowtham</h4>
+				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+			</div>
+			<p class = "review">A very happening place with my friends . 
+				Went there in group, its a place to go with friends after work for a drink or to play pool and hangout.
+				Good music and food</p>
 		</div>
-		<p class = "review">First I loved the ambience,
-			 second the surrounding was good and drink is quiet worthy and we spent 
-			 almost 6 hours there the serving team is quiet good responding people. Thank you guys.</p>
-		<div id = "child4">
-			<img class  = "icon" src = "../assets/img/login-icon.png" >
-			<h4 class = "head1">leena</h4>
-			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		<div class = "review-div">
+			<div id = "child3">
+				<img class  = "icon" src = "../assets/img/login-icon.png" >
+				<h4 class = "head1">Madan</h4>
+				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+			</div>
+			<p class = "review">First I loved the ambience,
+				second the surrounding was good and drink is quiet worthy and we spent 
+				almost 6 hours there the serving team is quiet good responding people. Thank you guys.</p>
 		</div>
-		<p class = "review">Great place to hangout with friends!! and gave us good recommendations.</p>
-		<div id = "child5">
-			<img class  = "icon" src = "../assets/img/login-icon.png" >
-			<h4 class = "head1">Ram</h4>
-			<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+		<div class = "review-div">
+			<div id = "child4">
+				<img class  = "icon" src = "../assets/img/login-icon.png" >
+				<h4 class = "head1">leena</h4>
+				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+			</div>
+			<p class = "review">Great place to hangout with friends!! and gave us good recommendations.</p>
 		</div>
-		<p class = "review">The food was excellent, generous portions and great prices. The service was fast and friendly.
-			 I highly recommended this place for a perfect drink and dinner . Loads of love to you guys keep rocking </p>
-		
+		<div class = "review-div">
+			<div id = "child5">
+				<img class  = "icon" src = "../assets/img/login-icon.png" >
+				<h4 class = "head1">Ram</h4>
+				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%"><br>
+			</div>
+			<p class = "review">The food was excellent, generous portions and great prices. The service was fast and friendly.
+				I highly recommended this place for a perfect drink and dinner . Loads of love to you guys keep rocking </p>
+		</div>
 					
 		</ul>
 	</div>
@@ -184,8 +298,8 @@
 			let num = "";
 			for(let i = 0; i < noOfTask; i++){
 				console.log(taskInArray[i])
-				let review = `<img class = "icon" src = "../assets/img/login-icon.png" ><h4 class = "head2" >${taskInArray[i].name}</h4>
-				<p class = "para1">${taskInArray[i].cmd}</p>`
+				let review = `<div class = "review-div"><img class = "icon" src = "../assets/img/login-icon.png" ><h4 class = "head2" >${taskInArray[i].name}</h4>
+				<p class = "para1">${taskInArray[i].cmd}</p></div>`
 				console.log(review);
 				
 				  //const _task = tasksInArray[i];

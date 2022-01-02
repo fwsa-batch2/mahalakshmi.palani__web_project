@@ -11,46 +11,90 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body onload = "Start()">
 	<div id = "div1">
-		<ul>
-			<a href = "Home_page.html" target = "blank"><li>Home</li>
-			<a href = "About.html" target = "blank"><li>About</li></a>
-			<a href = "menulist.html" target = "blank"><li>Menu</li></a>
-			<a href = "Contact.html"target = "blank"><li>Contact</li></a>
-			<a href = "review.html"target = "blank"><li>Review</li></a>
+		<ul id = "unorder1">
+			<a href = "Home_page.html" target = "blank"><li class = "link-li">Home</li>
+			<a href = "About.html" target = "blank"><li  class = "link-li">About</li></a>
+			<a href = "menulist.html" target = "blank"><li  class = "link-li">Menu</li></a>
+			<a href = "Contact.html"target = "blank"><li  class = "link-li">Contact</li></a>
+			<a href = "review.html"target = "blank"><li  class = "link-li">Review</li></a>
 			
 		</ul>
 		<img id = "logo" src = "../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
 		<p id = "para1">Klassy</p>
 	</div>
-	<h1 id = "head1">About us.....!</h1>
+	<h1 id = "head2">klassy restaurant</h1>
 	
-	<div id = "parent1">
+	<div>
+		<div id = "center">
+			<button id = "pbutton" onclick = "prev()"><</button>
+			<button id = "nbutton" onclick = "next()">></button>
+		</div>
 		
-		<div id = "child1">
-			<img id = "img1"src = "../assets/img/pexels-ella-olsson-1640777.jpg" alt = "foodimg">
-		</div>
-		<div id = "child2">	
-			<h1 id = "head2">klassy restaurant</h1>
-			<p id = "para2" >It perfectly satisfies digital ordering delivery.Make it easy for guests to discover our restaurant  online and exactly what they’re looking for .We are dedicated to serving freshly prepared and healthy dining options. 
-
-</p>		
-		</div>
 	</div>
-	<div id = "parent2">
-		
-		
-		<div id = "child4">	
-			<h1 id = "head3">We Leave A Delicious Memory For You</h1>
+	<div id = "about-div">
+		<h1 id = "head1">About us.....!</h1>
+		<h1 id = "head3">We Leave A Delicious Memory For You</h1>
 			<p id = "para3">We are dedicated to serving freshly prepared and healthy dining options.
-
-Whenever possible, we support our local farmers and vendors.Our menu items are made in-house, to order, with fresh and natural ingredients. We use only cage-free eggs, natural meats, organic tofu, and all fresh fruits and veggies for our homemade juices. We also use organic, locally roasted Caroline’s coffee.</p>		
+			Whenever possible, we support our local farmers and vendors.
+			Our menu items are made in-house, to order, with fresh and natural ingredients.
+		    We use only cage-free eggs, natural meats, organic tofu, and all fresh fruits and veggies for our homemade juices. 
+			We also use organic, locally roasted Caroline’s coffee.</p>	
+			<ul>
+				<li>Connecting diners to the best-in-the-city restaurant discounts & deals</li>
+				<li>Giving diners a cashless payment experience across restaurants & an opportunity to earn cashback on every payment</li>
+				<li>A unique membership - Dineout Passport - with massive benefits for the real connoisseur of food.</li>
+			</ul>	
+	</div>
+	<div id = "parent">
+		<div id = "child1" >
+			<img src="../assets/img/img-1.jpg" class="aboutimg"alt="aboutimg">
+			<p>Our users get access to exclusive offers at more than 40,000 restaurants in India.</p>
+		
 		</div>
-		<div id = "child3">
-			<img id = "img2"src = "../assets/img/eggs-breakfast-avocado-1296x728-header.jpg" alt = "foodimg">
+		<div id = "child2">
+			<img src="../assets/img/Oysters-at-Urban-Bar-and-Eatery.jpg" class="aboutimg"alt="aboutimg">
+			<p>klassy restaurant users save at least 30% of their dining out expenses over a regular person.</p>
 		</div>
 	</div>
+	
+	<script>
+		var imglist = ["restaurants-with-a-view-in-the-algarve.jpg","Restaurant.jfif","background-img1.jpeg"];
+		var num = 0;
+		function Start(){
+			document.getElementById("center").style.backgroundImage = "url("+imglist[num]+")";
+		
+		}
+		function next(){
+			num++;
+			if(num >= imglist.length){
+				console.log(num);
+				num = 0;
+				console.log(num);
+				document.getElementById("center").style.backgroundImage = "url("+imglist[num]+")";
+			}
+			else{
+				document.getElementById("center").style.backgroundImage = "url("+imglist[num]+")";
+			}
+		}
+		function prev(){
+			num--;
+			if(num < 0){
+				num = imglist.length-1;
+				document.getElementById("center").style.backgroundImage = "url("+imglist[num]+")";
+			}
+			else{
+				document.getElementById("center").style.backgroundImage = "url("+imglist[num]+")";
+				// if(num == 0){
+				// 	document.getElementById("prev").style.backgroundImage = "url("+imglist[imglist.length-1]+")";
+				// }
+				// else{
+				// 	document.getElementById("prev").style.backgroundImage = "url("+imglist[num-1]+")";
+				// }
+			}
+		}
+	</script>
 	
 </body>
 </html>
