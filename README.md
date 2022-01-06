@@ -1,8 +1,8 @@
   # Klassy resturant:
   # link:
-    * Git-hub Link: https://github.com/fwsa-batch-02/klassyrestaurantapp-ui
-    * Netlify link : https://klassyrestaurantapp-ui-mahalakshmipalani.netlify.app/
-    * Sonarcloud link: https://sonarcloud.io/project/overview?id=fwsa-batch-02_klassyrestaurantapp-ui
+    * Git-hub Link: [https://github.com/fwsa-batch-02/klassyrestaurantapp-ui(https://github.com/fwsa-batch-02/klassyrestaurantapp-ui)]
+    * Netlify link : [https://klassyrestaurantapp-ui-mahalakshmipalani.netlify.app/(https://klassyrestaurantapp-ui-mahalakshmipalani.netlify.app/)]
+    * Sonarcloud link: [https://sonarcloud.io/project/overview?id=fwsa-batch-02_klassyrestaurantapp-ui(https://sonarcloud.io/project/overview?id=fwsa-batch-02_klassyrestaurantapp-ui)]
   # Features:
    1. Register ( Completed )
    2. Login ( Completed )
