@@ -50,10 +50,13 @@
     <script>
         let foodList = []
         function onPageLoad(){
-			let listValue = JSON.parse(localStorage.getItem("list"));
+			let listValue = JSON.parse(localStorage.getItem("fooditems"));
 			if(listValue != null){
 				foodList = listValue;
 			}
+            else{
+                localStorage.setItem("fooditems",JSON.stringify([]));
+            }
 		}
 		onPageLoad();
         function submitHandler(){
@@ -72,7 +75,7 @@
             foodList.push(foodOPJ);
             console.log(foodList);
 			let value = JSON.stringify(foodList);
-			localStorage.setItem("list", value);
+			localStorage.setItem("fooditems", value);
         }
     </script>
 </body>
