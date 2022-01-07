@@ -50,7 +50,7 @@
     1. food name
     2. image url
     3. rate
-* Acceptance Criteria
+  * Acceptance Criteria
       1. All input fields are required.
       2. food name should not match with the local storage content.
       3. If everything is validated, the food image will be shown menu page.    
