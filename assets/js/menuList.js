@@ -1,16 +1,16 @@
 let userlist = [];
 
 function onPageLoad() {
-  let listValue = JSON.parse(localStorage.getItem("fooditems")); // null
+  let listValue = JSON.parse(localStorage.getItem("fooditems")); 
 
   if (listValue != null) {
     userlist = listValue;
   } else {
-    // listvalue = null;
+    
     userlist = [];
     localStorage.setItem("fooditems", JSON.stringify(userlist));
   }
-  // return userlist;
+  
 }
 onPageLoad();
 function renderFood(addItems){
@@ -25,7 +25,7 @@ function renderFood(addItems){
                         <p> RS.${obj.price}</p><button type = "button" data-food onclick = \"clickHandler('${obj.fname}','${obj.img}','${obj.price}')\">ADD CART</button>
                     </div>`;
     adding = adding + food;
-    // console.log(add);
+    
   }
   document.getElementById("addmenu").innerHTML = adding;
 }

@@ -49,7 +49,13 @@
 			border: 1px solid #012031db;
 			color: white;
 		}
-		#text{
+		#text1{
+			/* border: 1px solid #012031db; */
+			margin-left: 17%;
+			margin-top: 1%;
+			color: red;
+		}
+		#text2{
 			/* border: 1px solid #012031db; */
 			margin-left: 17%;
 			margin-top: 1%;
@@ -70,9 +76,10 @@
 			<input type = "text" placeholder = "Full name" class = "input1" required id = "name">
 			<!-- <p>Email:</p> -->
 			<input type = "text" placeholder = "Email" class = "input1"required id = "mail"><br>
-			<div id = "text"></div>	
+			<div id = "text1"></div>	
 			<!-- <p>Password:</p> -->
-			<input class="input1" type="password" placeholder="Password" maxlength="15" required id="checkpassword"><br>	
+			<input class="input1" type="password" placeholder="Password" maxlength="15" required id="checkpassword"><br>
+			<div id = "text2"></div>		
 			<input type = "checkbox"  id = "checkbox" onclick="showPassword()">	
 			<input type="submit" value = "Submit" id = "input2" ></input>
 			
@@ -101,8 +108,11 @@
 						window.location.href = "Home_page.html";
 						break;
 					}
+					else if(userDetail[i].email != currentMail && userDetail[i].password == currentPassword){
+						document.getElementById("text1").innerText = "enter valid Email";
+					}
 					else{
-						document.getElementById("text").innerText = "enter valid login detail";
+						document.getElementById("text2").innerText = "enter valid password";
 						
 					}
 				}

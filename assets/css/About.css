@@ -4,7 +4,7 @@ body{
 #div1{
 	height:60px;
 	width:100%;
-	/* background-color: #012031db; */
+	background-color: #012031db;
 	border: 1px solid black;
 	
 }
@@ -21,6 +21,16 @@ body{
 	
 
 }
+#head1{
+	margin-left: 183px;
+}
+#head3{
+	margin-left: 183px;
+}
+#para3{
+	margin-left: 183px;
+}
+#unorder2{margin-left: 158px;}
 a{
 	text-decoration: none;
 	color:black;
@@ -93,20 +103,25 @@ a:hover{
 	background-color: rgba(0,0,0,0.8);
   }
   #child1{
-	width:50%;
+	width:40%;
 	height: 50%;
-	/* border: 1px solid black; */
+	
 	float: left;
+	margin-left: 5%;
   }
   #child2{
-	width:50%;
+	width:40%;
 	height: 50%;
-	/* border: 1px solid black; */
+	
 	float: left;
+	margin-left: 5%;
 }
 .aboutimg{
 	width: 500px;
 	height: 300px;
 	
+}
+#head2{
+	text-align: center;
 }
   
