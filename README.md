@@ -8,13 +8,13 @@
   
 
   # Features:
-   1. Register ( Completed )
-   2. Login ( Completed )
-   3. Add menu (Completed)
-   4. Add comment (Completed)
-   5. Add to cart (In progress)
+    1. Register ( Completed )
+    2. Login ( Completed )
+    3. Add menu (Completed)
+    4. Add comment (Completed)
+    5. Add to cart (In progress)
 
-   # Register:
+# Register:
 
     1. Registration Fields:
       * User name
@@ -30,13 +30,13 @@
       * Password and Confirm password fields must contain same value.
       * If everything is validated, redirect to login page.
 
-    # Login:
-      1. Fields
-        * Email id
-        * Password
-      2. Acceptance Criteria
-        * All input fields are required.
-        * Email id and password should match with the local storage content.
-        * If everything is validated, redirect to home page.
+# Login:
+    1. Fields
+      * Email id
+      * Password
+    2. Acceptance Criteria
+      * All input fields are required.
+      * Email id and password should match with the local storage content.
+      * If everything is validated, redirect to home page.
 
 
