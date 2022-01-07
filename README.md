@@ -16,27 +16,28 @@
 
 # Register:
 
-    1. Registration Fields:
-      * User name
-      * User mail id
-      * Password
-      * Confirm Password
-    2. Acceptance Criteria:
-      * All input fields are required.
-      * User name must contain 3 characters and must not be empty.No special characters are allowed.
-      * Email id must include an '@' in the email address.
-      * Email id entered must not exist in local storage already.
-      * Password and Confirm password fields must contain minimum 8 and maximum 15 characters with atleast 1     lowercase, 1 uppercase , 1 special character except "space".
-      * Password and Confirm password fields must contain same value.
-      * If everything is validated, redirect to login page.
+  * Registration Fields:
+    1. User name
+    2. User mail id
+    3. Password
+    5. Confirm Password
+  * Acceptance Criteria:
+    1. All input fields are required.
+    2. User name must contain 3 characters and must not be empty.
+    No special characters are allowed.
+    3. Email id must include an '@' in the email address.
+    4. Email id entered must not exist in local storage already.
+    5. Password and Confirm password fields must contain minimum 8 and maximum 15 characters with atleast 1     lowercase, 1 uppercase , 1 special character except "space".
+    6. Password and Confirm password fields must contain same value.
+    7. If everything is validated, redirect to login page.
 
 # Login:
-    1. Fields
-      * Email id
-      * Password
-    2. Acceptance Criteria
-      * All input fields are required.
-      * Email id and password should match with the local storage content.
-      * If everything is validated, redirect to home page.
+  * Fields
+      1. Email id
+      2. Password
+  * Acceptance Criteria
+      1. All input fields are required.
+      2. Email id and password should match with the local storage content.
+      3. If everything is validated, redirect to home page.
 
 
