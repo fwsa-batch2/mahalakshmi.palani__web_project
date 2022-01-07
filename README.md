@@ -40,4 +40,17 @@
       2. Email id and password should match with the local storage content.
       3. If everything is validated, redirect to home page.
 
+# List of menu:
+  1. Only logged in user can get access to view the page .
+  2. click the add to cart button then the alert box will be shown and enter the quantity of food in the box. 
+  3. after click the add to cart button the food image will be shown cart page.
 
+# Add menu:
+  * Fields
+    1. food name
+    2. image url
+    3. rate
+* Acceptance Criteria
+      1. All input fields are required.
+      2. food name should not match with the local storage content.
+      3. If everything is validated, the food image will be shown menu page.    
