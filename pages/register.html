@@ -105,9 +105,18 @@
 
 				check1.type = "text";
 			}
+			else if(check1 === "text"){
+				document.getElementById('password').type="password";
+			}
 			if(check2.type === "password"){
 				check2.type = "text";
 			}
+			
+			
+			else if(check2 === "text"){
+				document.getElementById('password').type="password";
+			}
+			
 			
 			
 		}
@@ -145,6 +154,7 @@
 				
 				userlist.push(value);
 				let value1 = JSON.stringify(userlist);
+				console.log(value1);
 				localStorage.setItem("list", value1);
 				window.location.href = "login.html";
 			}

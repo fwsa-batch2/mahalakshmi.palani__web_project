@@ -42,15 +42,15 @@
 
 # List of menu:
   1. Only logged in user can get access to view the page .
-  2. click the add to cart button then the alert box will be shown and enter the quantity of food in the box. 
-  3. after click the add to cart button the food image will be shown cart page.
+  2. Click the add to cart button then the prompt will be displayed to enter the number of quantity in the box. 
+  3. After giving the requeast credential data will be local storage and will be displayed in the cart page.
 
 # Add menu:
   * Fields
-    1. food name
-    2. image url
-    3. rate
+    1. Food name
+    2. Image url
+    3. Rate
   * Acceptance Criteria
       1. All input fields are required.
       2. food name should not match with the local storage content.
-      3. If everything is validated, the food image will be shown menu page.    
+      3. If everything is validated, added menu will be display in the menu page.    

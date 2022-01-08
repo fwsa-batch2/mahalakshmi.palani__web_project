@@ -89,6 +89,8 @@
 				check1.type = "text";
 			}
 		}
+		// let getlist = localStorage.getItem("list");
+		// console.log(getlist);
 		function login(){
 			event.preventDefault();
 			let currentName = document.getElementById("name").value;
@@ -101,7 +103,9 @@
 				for(i = 0; i < userDetail.length; i++){
 					console.log(i);
 					console.log(userDetail[i]);
+
 					if(userDetail[i].email == currentMail && userDetail[i].password == currentPassword){
+						localStorage.setItem("loginlist",JSON.stringify(currentMail));
 						window.location.href = "Home_page.html";
 						break;
 					}
@@ -127,6 +131,11 @@
 			}
 		}
 		onPageLoad();
+
+
+		
+
+
 	</script>
 	
 </body>
