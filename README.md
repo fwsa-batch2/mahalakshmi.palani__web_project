@@ -42,9 +42,13 @@
 
 # List of menu:
   1. Only logged in user can get access to view the page .
-  2. Click the add to cart button then the prompt will be displayed to enter the number of quantity in the box. 
+  2. Click the add to cart button then the prompt will be displayed and enter the number of quantity in the box. 
   3. After giving the requeast credential data will be local storage and will be displayed in the cart page.
 
+  * Addmenu button
+    1. when click the addmenu button then the prompt will be displayed. enter the secret code.
+    2. Only admin know that secret code(ImMaha). If you are not an admin , it will throw errors message.
+    3. If you are admin it will redirect to addmenu page.
 # Add menu:
   * Fields
     1. Food name
@@ -53,4 +57,6 @@
   * Acceptance Criteria
       1. All input fields are required.
       2. food name should not match with the local storage content.
+      4. Only admin can get the access for this page.
+      5. 
       3. If everything is validated, added menu will be display in the menu page.    

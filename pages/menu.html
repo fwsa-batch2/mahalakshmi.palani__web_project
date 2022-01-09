@@ -138,7 +138,7 @@
             margin-left: 25%;
         }
 
-        button{
+        button {
             margin-top: 4%;
             margin-left: 5%;
             background-color: #012031db;
@@ -158,13 +158,9 @@
             border-radius: 60px;
             left: 0;
         }
-
-        
-
-        
     </style>
-    
-    
+
+
 </head>
 
 <body>
@@ -196,12 +192,9 @@
                 </a>
             </li>
             <li>
-                <a href="addmenu.html">
-                    Addmenu
-                </a>
+                <button type = "button" onclick="adminPage()"> Addmenu</button>
+
             </li>
-
-
         </ul>
 
         <img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
@@ -209,8 +202,28 @@
     </div>
     <a href="cart.html"> <img src="../assets/img/card-img.jpg" id="cart" alt="cart"></a>
     <div id="addmenu"></div>
-    
+
     <script src="../assets/js/menuList.js"></script>
+    <!-- <script src="../assets/js/admin.js"></script> -->
+    <script>
+       
+        function adminPage() {
+            let code = prompt("please enter the secret code = ");
+            console.log(code);
+            
+            if(code == "ImMaha"){
+                window.location.href = "addmenu.html";
+            }
+            else {
+               alert("only admin can access this page");
+               window.history.back();
+             
+             }
+
+        }
+        
+    </script>
+
 </body>
 
 </html>
