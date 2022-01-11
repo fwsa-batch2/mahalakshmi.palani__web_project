@@ -6,20 +6,10 @@ function showPassword(){
         
         check1.type = "text";
     }
-    else if(check1 == "text"){
-        document.getElementById('checkpassword').type="password";
-    }
     if(check2.type == "password"){
         check2.type = "text";
     }
-    
-    
-    else if(check2 == "text"){
-        document.getElementById('cpassword').type="password";
-    }
-    
-    
-    
+     
 }
 let userlist = [];
 function onPageLoad(){
