@@ -7,7 +7,7 @@ function showPassword(){
         check1.type = "text";
     }
     else if(check1 == "text"){
-        document.getElementById('password').type="password";
+        document.getElementById('checkpassword').type="password";
     }
     if(check2.type == "password"){
         check2.type = "text";
@@ -15,7 +15,7 @@ function showPassword(){
     
     
     else if(check2 == "text"){
-        document.getElementById('password').type="password";
+        document.getElementById('cpassword').type="password";
     }
     
     
