@@ -4,10 +4,10 @@ function showPassword(){
         check1.type = "text";
     }
 }
-// let getlist = localStorage.getItem("list");
-// console.log(getlist);
-function login(){
+
+function login(event){
     event.preventDefault();
+    
     let currentName = document.getElementById("name").value;
     let currentMail = document.getElementById("mail").value;
     let currentPassword = document.getElementById("checkpassword").value;
@@ -15,7 +15,7 @@ function login(){
     
 
     if(userDetail != null){
-        for(i = 0; i < userDetail.length; i++){
+        for(let i = 0; i < userDetail.length; i++){
             console.log(i);
             console.log(userDetail[i]);
 
