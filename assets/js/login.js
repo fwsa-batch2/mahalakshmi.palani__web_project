@@ -8,7 +8,7 @@ function showPassword(){
 function login(event){
     event.preventDefault();
     
-    let currentName = document.getElementById("name").value;
+    let username = document.getElementById("name").value;
     let currentMail = document.getElementById("mail").value;
     let currentPassword = document.getElementById("checkpassword").value;
     let userDetail = JSON.parse(localStorage.getItem("list"));
