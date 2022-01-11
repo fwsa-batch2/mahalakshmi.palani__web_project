@@ -29,7 +29,7 @@ function onPageLoad(){
 }
 onPageLoad();
 
-function submitHandler() {
+function submitHandler(event) {
     event.preventDefault();
     let name = document.getElementById("name").value;
     let mail = document.getElementById("mail").value;
@@ -37,11 +37,11 @@ function submitHandler() {
     let cpassword = document.getElementById("cpassword").value;
     let emailId = isEmailExist(mail);
     if(password != cpassword){
-        //alert("password invalid");
+        
         document.getElementById("text2").innerText = "password invalid";
     }
     else if(emailId){
-        //alert("this email already exist");
+        
         document.getElementById("text1").innerText = "this email already exist";
     } 
     else{
@@ -62,13 +62,13 @@ function submitHandler() {
 }
 
 
-// this function will return true or false
-// this function will take an email as input
+let count = userlist.length
 function isEmailExist(inputEmail) {
     console.group(isEmailExist)
     let isExist = false;
-    for (let i = 0; i < userlist.length; i++) {
-        if (inputEmail == userlist[i].email) {
+   
+    for (let i = 0; i < count; i++) {
+        if (inputEmail == count[i].email) {
             isExist = true;
             break;
         }
