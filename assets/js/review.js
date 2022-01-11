@@ -12,8 +12,8 @@ let myArray = [];
 			}
 		}
 		onPageLoad();
-		function submitHandler(){
-			//  event.preventDefault();
+		function submitHandler(event){
+			  event.preventDefault();
 			 let task = document.getElementById("newTask").value;
 			 let name = document.getElementById("name").value;
 			 let url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1200px-OOjs_UI_icon_userAvatar.svg.png"
@@ -23,10 +23,6 @@ let myArray = [];
 				 "url":url
 			 }
 			 myArray.push(obj);
-			//  console.log(task);
-			//  myArray.push(task);
-			//  let order = document.getElementById("unorder");
-			//  order.innerHTML += task+"<br>";
 			 let taskListInString = JSON.stringify(myArray);
 			 localStorage.setItem("comment", taskListInString);
 			 
@@ -35,9 +31,7 @@ let myArray = [];
 		}
 		function renderTask(){
 			let taskInString =  localStorage.getItem("comment");
-			// console.log(taskInString);
 			let taskInArray = JSON.parse(taskInString);
-			// console.log(taskInArray);
 			let noOfTask = taskInArray.length;
 			let num = "";
 			for(let i = 0; i < noOfTask; i++){
@@ -50,9 +44,7 @@ let myArray = [];
 							</div>`
 				console.log(review);
 				
-				  //const _task = tasksInArray[i];
-				//  let list =  "<li>"+taskInArray[i]+"</li>";
-				//  console.log(list);
+				  
 				  num += review;
 			 }
 			  let order = document.getElementById("unorder");
