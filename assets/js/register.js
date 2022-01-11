@@ -1,19 +1,20 @@
 function showPassword(){
     let check1 = document.getElementById("checkpassword");
     let check2 = document.getElementById("cpassword");
-    if(check1.type === "password"){
-
+    // console.log(check1.type == "password")
+    if(check1.type == "password"){
+        
         check1.type = "text";
     }
-    else if(check1 === "text"){
+    else if(check1 == "text"){
         document.getElementById('password').type="password";
     }
-    if(check2.type === "password"){
+    if(check2.type == "password"){
         check2.type = "text";
     }
     
     
-    else if(check2 === "text"){
+    else if(check2 == "text"){
         document.getElementById('password').type="password";
     }
     
