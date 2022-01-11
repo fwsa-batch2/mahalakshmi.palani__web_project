@@ -84,7 +84,7 @@
                                     <div id = "button-div">
                                         <p class = "para1"> RS.${obj.imgprice}</p>
                                         <button type = "button" class = "button1" onclick = \"decrease()\">-</button>
-                                        <span data-id="para-${i}" class="para2">${obj.qty}</span>
+                                        <span id="para-${i}" class="para2">${obj.qty}</span>
                                         <button type = "button" class = "button2" onclick = \"increase()\">+</button>
                                         <button type = "button" class = "button3" onclick = \"delete()\">Delete</button>
                                     </div>
@@ -102,8 +102,9 @@
             // let getattribute = event.target.value;
             // let value1 = document.getElementById("para-"+getattribute)
             // console.log(value1);
-           
-            let getattribute = document.getElementById("para-"+num).innerText = num+1;   // para-0
+            let getid = document.getElementById("para-"+num).innerText;
+            console.log(getid); 
+            let getattribute = document.getElementById("para-"+num).innerText = getid+1;   // para-0
             console.log(getattribute);
             num++;
         }

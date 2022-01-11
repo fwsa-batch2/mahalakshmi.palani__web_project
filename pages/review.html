@@ -8,13 +8,22 @@
 </head>
 <style>
     #home{
-        border: 1px solid black;
-         width: 40%;
-		 height: 300px;
+        /* border: 1px solid #012031db; */
+         width: 50%;
+		 height: 200px;
         margin: auto;
         /* margin-top: 5%; */ 
+		position:relative;
+		box-shadow: 0 0 10px black;
 
     }
+	body{
+		background-image: url(./../assets/img/laptop.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin: 0;
+		/* color: white; */
+	}
 	.para{
 		margin: 0;
 		width: 50px;
@@ -23,24 +32,40 @@
 		margin-left: 1%;
 	}
 	.input{
-		height: 25px;
-		margin-top: 5%;
-		margin-left: 9%;
+		height: 35px;
+		position: absolute;
+		/* margin-top: 5%;
+		margin-left: 9%; */
+		left: 5%;
+		top: 5%;
+		width: 40%;
 	}
 	
     #addbutton{
-        margin-top: 5%;
-        margin-left: 20%;
+        /* margin-top: 5%;
+        margin-left: 20%; */
+		position: absolute;
+		left: 38%;
+		top: 32%;
+		width: 25%;
+		height: 20%;
+		background-color:#656563; 
 
     }
     #newTask{
-        width: 50%;
-        height: 45px;
-        margin-left: 9%;
+        width: 40%;
+        height: 35px;
+        /* margin-left: 9%;
 		margin-top:5% ;
+		float: left; */
+		position: absolute;
+		left: 54%;
+		top: 5%;
+		padding-top: 1%;
     }
     h1{
         text-align: center;
+		color:aliceblue;
     }
 	.icon{
 		width:30px;
@@ -51,6 +76,15 @@
 		width: 50%;
 		/* border: 1px solid black; */
 		margin: auto;
+	}
+	.review-div{
+		/* border: 1px solid black; */
+		padding: 1%;
+		margin-top: 1%;
+		/* width: 50%; */
+		height: 20%;
+		/* float: left; */
+		box-sizing: border-box;
 	}
 	.head1{
 		width:15%;
@@ -65,6 +99,7 @@
 	}
 	.para1{
 		margin-top: 2%;
+		
 		/* border: 1px solid black; */
 		/* float:left; */
 	}
@@ -76,28 +111,27 @@
 		 margin-left: 7%; 
 		/* margin-top: 5px; */
 		font-size:20px;
+		color: black;
 	}
 	.star{
 		width:70px;
 		float:right;
 		margin-top: 2%;
 	}
-	.review-div{
-		
-		padding: 1%;
-		margin-top: 1%;
-	}
-	 
+	
+	 .review{
+		color: white;
+	 }
 	.review-div:hover{
 		/* border: 1px solid black; */
-		box-shadow: 0 0 10px;
+		/* box-shadow: 0 0 10px black; */
 	}
 	#div1{
 		height:60px;
 		width:101%;
 		/* background-color: #012031db; */
 		/* border: 1px solid black; */
-		background-color:#012031db; 
+		background-color:#656563; 
 	
 	}
 	li{
@@ -128,17 +162,11 @@
 	}
 	li:hover{
 		background-color:#012031db; 
-		
-		/* background-color: black; */
 	}
 	a:hover{
 		color:white;
 	}
-	body{
-				/* background-image: url("../assets/img/Simple-Minimalist-Background-Image.jpg");
-				background-repeat: no-repeat;
-				background-size: cover; */
-	}
+	
 	#logo{
 		height:60px;
 		width:60px;
@@ -169,7 +197,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="menulist.html">
+			<a href="menu.html">
 				Menu
 			</a>
 		</li>
@@ -193,17 +221,17 @@
 	<div id = "home">
 		
 		<form>
-			<p  class = "para">Name</p>
-			<input type="text" id = "name" class = "input"><br>
-			<p  class = "para">Comment</p>
-			<textarea type="text"  id="newTask" placeholder="Enter new Task" required rows="5" cols="55"></textarea><br>
+			<!-- <p  class = "para">Name</p> -->
+			<input type="text" id = "name" class = "input" placeholder="Name" required>
+			<!-- <p  class = "para">Comment</p> -->
+			<textarea type="text"  id="newTask" placeholder="Comment" required rows="5" cols="40"></textarea><br>
 			<button type="submit" id="addbutton" onclick = "submitHandler()" > Add comment </button>
 			
 		</form>
 	
 	</div>
 	<div id = "parent">
-		<ul id = "unorder"></ul>
+		
 		<div class = "review-div">
 			<div id = "child1">
 				<img class = "icon" src = "../assets/img/login-icon.png" alt="icon" >
@@ -242,7 +270,7 @@
 		</div>
 		<div class = "review-div">
 			<div id = "child5">
-				<img class  = "icon" src = "../assets/img/login-icon.png" alt="icon">
+				<img class  = "icon" src = "../assets/img/1200px-OOjs_UI_icon_userAvatar.svg.png" alt="icon">
 				<h4 class = "head1">Ram</h4>
 				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png" width = "10%" height = "5%" alt = "starimg"><br>
 			</div>
@@ -250,65 +278,9 @@
 				I highly recommended this place for a perfect drink and dinner . Loads of love to you guys keep rocking </p>
 		</div>
 					
-		</ul>
+		<ul id = "unorder"></ul>
 	</div>
     
-    <script>
-		let myArray = [];
-
-		function onPageLoad(){
-			let listValue = JSON.parse(localStorage.getItem("comment"));
-			if(listValue != null){
-				myArray = listValue;
-			}
-			else {
-  
-				myArray = [];
-				localStorage.setItem("comment", JSON.stringify(myArray));
-			}
-		}
-		onPageLoad();
-		function submitHandler(){
-			//  event.preventDefault();
-			 let task = document.getElementById("newTask").value;
-			 let name = document.getElementById("name").value;
-			 let obj = {
-				 "name":name,
-				 "cmd":task,
-			 }
-			 myArray.push(obj);
-			//  console.log(task);
-			//  myArray.push(task);
-			//  let order = document.getElementById("unorder");
-			//  order.innerHTML += task+"<br>";
-			 let taskListInString = JSON.stringify(myArray);
-			 localStorage.setItem("comment", taskListInString);
-			 
-			  renderTask();
-			
-		}
-		function renderTask(){
-			let taskInString =  localStorage.getItem("comment");
-			// console.log(taskInString);
-			let taskInArray = JSON.parse(taskInString);
-			// console.log(taskInArray);
-			let noOfTask = taskInArray.length;
-			let num = "";
-			for(let i = 0; i < noOfTask; i++){
-				console.log(taskInArray[i])
-				let review = `<div class = "review-div"><img class = "icon" src = "../assets/img/login-icon.png" ><h4 class = "head2" >${taskInArray[i].name}</h4>
-				<p class = "para1">${taskInArray[i].cmd}</p></div>`
-				console.log(review);
-				
-				  //const _task = tasksInArray[i];
-				//  let list =  "<li>"+taskInArray[i]+"</li>";
-				//  console.log(list);
-				  num += review;
-			 }
-			  let order = document.getElementById("unorder");
-			  order.innerHTML = num;
-		}
-		renderTask();
-	</script>	
+    <script src="./../assets/js/review.js"></script>	
 </body>
 </html>

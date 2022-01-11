@@ -66,19 +66,13 @@
         
         
         let foodList = []
-        let name = document.getElementById("name").value;
-        let url = document.getElementById("url").value;
+        // let name = document.getElementById("name").value;
+        // let url = document.getElementById("url").value;
+        
         function onPageLoad(){
 			let listValue = JSON.parse(localStorage.getItem("fooditems"));
             console.log(listValue.length)
-            for(i = 0; i < listValue.length; i++){
-                if(listValue[i].fname == name){
-                    document.getElementById("error1").innerText = "this name already exist"
-                }
-                else if(listValue[i].img == url){
-                    document.getElementById("error1").innerText = "this url already exist"
-                }
-            }
+            
 			if(listValue != null){
 				foodList = listValue;
 			}
@@ -107,6 +101,19 @@
            
             
         }
+        // function click(){
+        //     let listValue = JSON.parse(localStorage.getItem("fooditems"));
+        //     console.log(listValue.length)
+        //     for(i = 0; i < listValue.length; i++){
+        //         if(listValue[i].fname == name){
+        //             document.getElementById("error1").innerText = "this name already exist"
+        //         }
+        //         else if(listValue[i].img == url){
+        //             document.getElementById("error1").innerText = "this url already exist"
+        //         }
+        //     }
+        // }
+        
     </script>
 </body>
 </html>

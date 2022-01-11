@@ -58,5 +58,4 @@
       1. All input fields are required.
       2. food name should not match with the local storage content.
       4. Only admin can get the access for this page.
-      5. 
-      3. If everything is validated, added menu will be display in the menu page.    
+      5. If everything is validated, added menu will be display in the menu page.    
