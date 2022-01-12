@@ -84,7 +84,7 @@
 
 	<div id = "home">
 		<h1>Welcome</h1>
-		<form onsubmit="submitHandler()">
+		<form onsubmit="submitHandler(event)">
 			<input class="value" type="text" placeholder="User name" required id="name"  pattern="[A-Za-z]{3,16}" title="minimum 3 char maximum 16 char"><br>
 			<input class="value" type="text" placeholder="Email ID" required id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "please include an '@' in the email address"><br>
 			<div id = "text1"></div>
@@ -98,6 +98,7 @@
 		</form>
 	</div>
 	<script src = "./../assets/js/register.js"></script>
+	
 
 </body>
 
