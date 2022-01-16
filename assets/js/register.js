@@ -2,7 +2,6 @@ function showPassword(){
     let check1 = document.getElementById("checkpassword");
     let check2 = document.getElementById("cpassword");
     if(check1.type == "password"){
-
         check1.type = "text";
     }
     if(check2.type == "password"){
@@ -13,6 +12,7 @@ function showPassword(){
 let userlist = [];
 function onPageLoad(){
     let listValue = JSON.parse(localStorage.getItem("list"));
+    console.log(listValue);
     if(listValue != null){
         userlist = listValue;
     }
@@ -54,7 +54,6 @@ function submitHandler(event) {
 
 
 function isEmailExist(inputEmail) {
-    console.group(isEmailExist)
     let len = userlist.length
     let isExist = false;
     for (let i = 0; i < len; i++) {
@@ -63,6 +62,6 @@ function isEmailExist(inputEmail) {
             break;
         }
     }
-    console.groupEnd(isEmailExist)
+   
     return isExist;
 }

@@ -7,19 +7,18 @@
     <title>Document</title>
 </head>
 <style>
-    .img-add {
+        .img-add {
             width: 350px;
             height: 350px;
             border: 1px solid #012031db;
             float: left;
             margin-left: 100px;
             margin-top: 30px;
-            /* background-image: url("../assets/img/istockphoto-1287325029-170667a.jpg"); */
             background-repeat: no-repeat;
             background-size: cover;
            
-    } 
-    .foodimg {
+         } 
+        .foodimg {
             width: 80%;
             height: 70%;
             margin-left: 10%;
@@ -27,23 +26,22 @@
 
         }
         #addmenu {
-            /* border: 1px solid black; */
+          
             width: 80%;
             margin: auto;
             height: 910px;
 
         }
         #button-div{
-            /* border: 1px solid black; */
             margin-top: 3%;
             position: relative;
 
         }
         .para2{
-            width: 10px;
+            width: 15px;
             /* border: none; */
             position: absolute;
-            left: 117px;
+            left: 115px;
         }
         .para1{
             width:12%;
@@ -72,6 +70,18 @@
     <h1>Cart</h1>
     <div id = "addmenu"></div>
     <script>
+        let userlist = [];
+        function onPageLoad() {
+            let listValue = JSON.parse(localStorage.getItem("cart")); 
+            if (listValue != null) {
+                userlist = listValue;
+            } 
+            else {
+                userlist = [];
+                localStorage.setItem("cart", JSON.stringify(userlist));
+            }
+        }
+        onPageLoad();
         function renderCart(addCart){
             let len = addCart.length;
             let adding ="";
@@ -82,14 +92,15 @@
                                     <h2> ${obj.imgname}</h2>
                                     <img src=${obj.imgurl} class = "foodimg" alt="foodname">
                                     <div id = "button-div">
-                                        <p class = "para1"> RS.${obj.imgprice}</p>
-                                        <button type = "button" class = "button1" onclick = \"decrease()\">-</button>
-                                        <span id="para-${i}" class="para2">${obj.qty}</span>
-                                        <button type = "button" class = "button2" onclick = \"increase()\">+</button>
+                                        <span class = "para1" id = "rate-${i}" value = "${obj.imgprice}"> RS.${obj.imgprice}</span>
+                                        <button type = "button" class = "button1"  value = ${i} onclick = \"decrease()\">-</button>
+                                        <input id="para-${i}" class="para2" value = "1"></input>
+                                        <button type = "button" class = "button2" value = ${i} onclick = \"increase()\">+</button>
                                         <button type = "button" class = "button3" onclick = \"delete()\">Delete</button>
                                     </div>
-                                   
-                                </div>`;
+                                    
+                            </div>
+                            `;
                 adding = adding + food;
             }
             document.getElementById("addmenu").innerHTML = adding;
@@ -97,16 +108,39 @@
         let getValue = JSON.parse(localStorage.getItem("cart"));
         renderCart(getValue);
         console.log(getValue);
-        let   num = 0;
         function increase(){
-            // let getattribute = event.target.value;
-            // let value1 = document.getElementById("para-"+getattribute)
-            // console.log(value1);
-            let getid = document.getElementById("para-"+num).innerText;
-            console.log(getid); 
-            let getattribute = document.getElementById("para-"+num).innerText = getid+1;   // para-0
+            let getattribute = event.target.value;
             console.log(getattribute);
-            num++;
+            let value1 = document.getElementById("para-"+getattribute).value;
+            console.log(value1);
+            let typecasting = JSON.parse(value1);
+            let qtyValue = typecasting+1;
+            if(qtyValue != null){
+                document.getElementById("para-"+getattribute).value = qtyValue;
+            }
+            let foodrate = document.getElementById("rate-"+getattribute).getAttribute("value");
+            console.log(foodrate);
+            let total = foodrate*qtyValue;
+            if(total != null){
+                document.getElementById("rate-"+getattribute).innerText = total;
+            }
+        }
+        function decrease(){
+            let getattribute = event.target.value;
+            console.log(getattribute);
+            let value1 = document.getElementById("para-"+getattribute).value;
+            console.log(value1);
+            let typecasting = JSON.parse(value1);
+            let qtyValue = typecasting-1;
+            if(qtyValue != null){
+                document.getElementById("para-"+getattribute).value = qtyValue;
+            }
+            let foodrate = document.getElementById("rate-"+getattribute).getAttribute("value");
+            console.log(foodrate);
+            let total = foodrate*qtyValue;
+            if(total != null){
+                document.getElementById("rate-"+getattribute).innerText = total;
+            }
         }
     </script>
 </body>

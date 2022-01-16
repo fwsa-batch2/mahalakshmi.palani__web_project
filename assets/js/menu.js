@@ -40,17 +40,14 @@ function clickHandler(name,url,price){
   console.log(name);
   console.log(url);
   console.log(price);
-  let qty = prompt("enter the number of food quantity");
+  
   let cartobj = {
     "imgname":name,
     "imgurl":url,
-    "qty":qty,
     "imgprice":price
   }
   imgArray.push(cartobj);
   localStorage.setItem("cart",(JSON.stringify(imgArray)));
-  
-  
 
 }
 

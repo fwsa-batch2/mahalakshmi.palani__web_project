@@ -65,13 +65,10 @@
     <script>
         
         
-        let foodList = []
-        let name = document.getElementById("name").value;
-        let url = document.getElementById("url").value;
-        
+        let foodList = []    
         function onPageLoad(){
 			let listValue = JSON.parse(localStorage.getItem("fooditems"));
-            console.log(listValue.length)
+            console.log(listValue)
             
 			if(listValue != null){
 				foodList = listValue;
@@ -86,35 +83,54 @@
             let name = document.getElementById("name").value;
             let img = document.getElementById("url").value;
             let price = document.getElementById("price").value;
-            console.log(name);
-            let foodOPJ = {
-                "fname":name,
-                "img":img,
-                "price":price
+            let imgName = foodName(name);
+            let imgUrl = foodUrl(img);
+            if(imgName){
+                 document.getElementById("error1").innerText = "this name already exist";
+             } 
+             else if(imgUrl){
+                document.getElementById("error2").innerText = "this url already exist";
+             }
+             else{
+                let foodOPJ = {
+                    "fname":name,
+                    "img":img,
+                    "price":price
 
-            }
+                }
 
-            foodList.push(foodOPJ);
-            console.log(foodList);
-			let value = JSON.stringify(foodList);
-			localStorage.setItem("fooditems", value);
+                foodList.push(foodOPJ);
+                console.log(foodList);
+                let value = JSON.stringify(foodList);
+                localStorage.setItem("fooditems", value);
+             }
+            
            
             
         }
-        function click(){
-            let listValue = JSON.parse(localStorage.getItem("fooditems"));
-            // console.log(listValue.length)
-            // console.log(name);
-            for(i = 0; i < listValue.length; i++){
-                if(listValue[i].fname == name){
-                    document.getElementById("error1").innerText = "this name already exist"
-                }
-                else if(listValue[i].img == url){
-                    document.getElementById("error2").innerText = "this url already exist"
+        function foodName(name){
+            let len = foodList.length;
+            let isExist = false;
+            for(let i = 0; i < len; i++){
+                if(foodList[i].fname == name ){
+                    isExist = true
                 }
             }
+            return isExist;
+            
         }
-        click()
+        function foodUrl(url){
+            let len = foodList.length;
+            let isExist = false;
+            for(let i = 0; i < len; i++){
+                if(foodList[i].img == url){
+                    isExist = true
+                }
+            }
+            return isExist;
+        }
+
+        
     </script>
 </body>
 </html>

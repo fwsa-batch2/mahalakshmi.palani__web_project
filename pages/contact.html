@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        height:60px;
+        width:100%;
+        background-color: #012031db;
+        border: 1px solid black;
+	
+    }
+    #unorder1{
+        margin:0;
+        position: absolute;
+        height:9%;
+        display: flex;
+        width: 60%;
+	
+    }
+    .link-li{
+	
+        list-style:none;
+        height: 60%;
+        margin-top: 10%; 
+        margin-left:4%;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 6px;
+        font-size: 20px;
+	
+
+    }
+    .link-li:hover{
+        background-color:#012031db; 
+        color:white;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        color:white;
+    }
+    #logo{
+	height:60px;
+	width:60px;
+	position: absolute;
+	right:0;
+	border-radius:50px;
+}
+#para1{
+	margin:0;
+	position: absolute;
+	right: 70px;
+	font-size: 40px;
+	font-family: 'Dancing Script', cursive;
+}
+#div2{
+    width: 30%;
+    margin: auto;
+    background-color: white;
+    height: 415px;
+}
+.value{
+    height: 30px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+#para{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.radiobox{
+   margin: 0;
+
+}
+#child{
+    margin-left: 19%;
+    margin-top: 3%;
+}
+#button{
+    margin-left: 20%;
+    height: 30px;
+    width: 62%;
+    margin-top: 5%;
+    background-color:#012031db; 
+}
+#msg{
+    margin-left: 20%;
+    margin-top: 5%;
+    
+}
+h1{
+    text-align: center;
+    margin: 0;
+    margin-top: 2%;
+}
+body{
+    background-image: url("../assets/img/contact-us_36325-2135.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+</style>
+<body>
+    <div id = "div1">
+		<ul id = "unorder1">
+			<a href = "Home_page.html" target = "blank"><li class = "link-li">Home</li>
+			<a href = "About.html" target = "blank"><li  class = "link-li">About</li></a>
+			<a href = "menu.html" target = "blank"><li  class = "link-li">Menu</li></a>
+			<a href = "Contact.html"target = "blank"><li  class = "link-li">Contact</li></a>
+			<a href = "review.html"target = "blank"><li  class = "link-li">Review</li></a>
+			
+		</ul>
+		<img id = "logo" src = "../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
+		<p id = "para1">Klassy</p>
+	</div>
+    <div id = "div2">
+        <h1>Send us message</h1>
+		<form >
+			<input class="value" type="text" placeholder="User name" required id="name"  pattern="[A-Za-z]{3,16}" title="minimum 3 char maximum 16 char"><br>
+			<input class="value" type="text" placeholder="Email ID" required id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "please include an '@' in the email address"><br>
+			<div id = "text1"></div>
+			<input class="value" type="tel" placeholder="Mobile"  maxlength="10" required id="num" style="margin-bottom: 1%;"> <br>
+            <label for="para" id = "para">prefered mode of communication</label>
+            <div id = "child">
+                <input type = "radio"  class = "radiobox">
+                <label for="mobile">mobile</label>
+                <input type = "radio"  class = "radiobox">
+                <label for="email">email</label>
+            </div>
+			<textarea type="text"  id="msg" placeholder="message" required rows="2" cols="30"></textarea><br>
+			<input id="button" type="submit" placeholder="submit" value="submit" required>
+			
+		</form>
+    </div>
+    <div id = "div3"></div>
+</body>
+</html>

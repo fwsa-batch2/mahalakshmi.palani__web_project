@@ -18,7 +18,6 @@ function login(event){
             console.log(userDetail[i]);
 
             if(userDetail[i].email == currentMail && userDetail[i].password == currentPassword){
-                localStorage.setItem("loginlist",JSON.stringify(currentMail));
                 window.location.href = "Home_page.html";
                 break;
             }
@@ -38,7 +37,7 @@ function login(event){
 let userlist = [];
 function onPageLoad(){
     let listValue = JSON.parse(localStorage.getItem("list"));
-    userlist.push(listValue);
+    // userlist.push(listValue);
     if(listValue != null){
         userlist = listValue;
     }
