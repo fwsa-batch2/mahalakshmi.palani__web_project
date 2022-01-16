@@ -37,7 +37,6 @@ function login(event){
 let userlist = [];
 function onPageLoad(){
     let listValue = JSON.parse(localStorage.getItem("list"));
-    // userlist.push(listValue);
     if(listValue != null){
         userlist = listValue;
     }
