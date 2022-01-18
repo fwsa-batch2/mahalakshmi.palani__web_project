@@ -9,7 +9,7 @@ body{
 	
 }
 li{
-	/* border: 1px solid black; */
+
 	list-style:none;
 	height: 60%;
 	margin-top: 1%; 
@@ -29,16 +29,16 @@ ul{
 	margin:0;
 	position: absolute;
 	height:9%;
-	/* border:1px solid black; */
 	display: flex;
 	width: 60%;
 	
 }
 
 li:hover{
-	 background-color:#012031db; 
+	background-color:#012031db; 
 	color:white;
-	/* background-color: black; */
+	border-radius: 10px;
+	
 }
 a:hover{
 	color:white;
@@ -50,7 +50,7 @@ a:hover{
 	position: absolute;
 	right:0;
 	border-radius:50px;
-	/* top:3px; */
+
 }
 #para1{
 	margin:0;
