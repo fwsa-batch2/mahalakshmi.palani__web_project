@@ -98,28 +98,32 @@ a:hover{
 	font-size: 35px;
 	color: white;
 }
-
-.prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0.8);
-  }
   #child1{
 	width:40%;
 	height: 50%;
-	
+	overflow: hidden;
 	float: left;
 	margin-left: 5%;
+	/* border: 1px solid black;
+	box-sizing: border-box; */
   }
   #child2{
 	width:40%;
 	height: 50%;
-	
+	overflow: hidden;
 	float: left;
 	margin-left: 5%;
+	/* border: 1px solid black;
+	box-sizing: border-box; */
 }
 .aboutimg{
-	width: 500px;
+	width: 503px;
 	height: 300px;
 	
+}
+.aboutimg:hover{
+	transform:scale(1.1);
+	transition:1s;
 }
 #head2{
 	text-align: center;
