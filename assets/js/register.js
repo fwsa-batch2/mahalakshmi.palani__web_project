@@ -1,3 +1,4 @@
+// show password
 function showPassword(){
     let check1 = document.getElementById("checkpassword");
     let check2 = document.getElementById("cpassword");
@@ -18,8 +19,8 @@ function onPageLoad(){
     }
 }
 onPageLoad();
-
-function submitHandler(event) {
+// email validation
+function submitHandler(event){
     event.preventDefault();
     let name = document.getElementById("name").value;
     let mail = document.getElementById("mail").value;
@@ -52,7 +53,7 @@ function submitHandler(event) {
 }
 
 
-
+// checking the email exist or not
 function isEmailExist(inputEmail) {
     let len = userlist.length
     let isExist = false;

@@ -1,10 +1,11 @@
+// show password
 function showPassword(){
     let check1 = document.getElementById("checkpassword");
     if(check1.type === "password"){
         check1.type = "text";
     }
 }
-
+// checking email and password match with the local storage content.
 function login(event){
     event.preventDefault();
     let currentMail = document.getElementById("mail").value;

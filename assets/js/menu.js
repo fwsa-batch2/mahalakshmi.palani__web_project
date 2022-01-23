@@ -14,6 +14,8 @@ function onPageLoad() {
   
 }
 onPageLoad();
+// get the value from the local storage and
+// added value in the menu page 
 function renderFood(addItems){
   let len = addItems.length;
   console.log(len);
@@ -34,7 +36,7 @@ function renderFood(addItems){
 let getValue = JSON.parse(localStorage.getItem("fooditems"));
 renderFood(getValue);
 console.log(getValue);
-
+// set the value in local storage.
 let imgArray = [];
 function clickHandler(name,url,price){
   console.log(name);

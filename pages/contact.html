@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,139 +8,239 @@
     <title>Document</title>
 </head>
 <style>
-    #div1{
-        height:60px;
-        width:100%;
-        background-color:white;
+    #div1 {
+        height: 60px;
+        width: 100%;
+        background-color: white;
     }
-    #unorder1{
-        margin:0;
+
+    #unorder1 {
+        margin: 0;
         position: absolute;
-        height:9%;
+        height: 9%;
         display: flex;
         width: 60%;
-	
+
     }
-    .link-li{
-	
-        list-style:none;
+
+    .link-li {
+
+        list-style: none;
         height: 60%;
-        margin-top: 10%; 
-        margin-left:4%;
+        margin-top: 10%;
+        margin-left: 4%;
         padding-left: 25px;
         padding-right: 25px;
         padding-top: 6px;
         font-size: 20px;
     }
-    .link-li:hover{
-        background-color:#012031db; 
-        color:white;
+
+    .link-li:hover {
+        background-color: #012031db;
+        color: white;
         border-radius: 10px;
     }
-    a{
-        text-decoration: none;
-        color:black;
-    }
-    a:hover{
-        color:white;
-    }
-    #logo{
-	height:60px;
-	width:60px;
-	position: absolute;
-	right:0;
-	border-radius:50px;
-}
-#para1{
-	margin:0;
-	position: absolute;
-	right: 70px;
-	font-size: 40px;
-	font-family: 'Dancing Script', cursive;
-}
-#div2{
-    width: 30%;
-    margin: auto;
-    background-color: white;
-    height: 415px;
-    margin-top: 2%;
-    padding-top: 2%;
-}
-.value{
-    height: 30px;
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 5%;
-}
-#para{
-    margin-left: 20%;
-    margin-top: 5%;
-}
-.radiobox{
-   margin: 0;
 
-}
-#child{
-    margin-left: 19%;
-    margin-top: 3%;
-}
-#button{
-    margin-left: 20%;
-    height: 30px;
-    width: 62%;
-    margin-top: 5%;
-    background-color: #012031db; 
-	
-}
-#msg{
-    margin-left: 20%;
-    margin-top: 5%;
-    
-}
-h1{
-    text-align: center;
-    margin: 0;
-    margin-top: 2%;
-}
-body{
-    background-image: url("../assets/img/istockphoto-1311934969-170667a.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-}
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    #logo {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        right: 0;
+        border-radius: 50px;
+    }
+
+    #para1 {
+        margin: 0;
+        position: absolute;
+        right: 70px;
+        font-size: 40px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    #div2 {
+        width: 30%;
+        /* margin: auto; */
+        background-color: white;
+        height: 415px;
+        margin-top: 5%;
+        padding-top: 2%;
+        margin-left: 18%;
+        float: left;
+        /* border: 1px solid black; */
+    }
+
+    #div3 {
+        width: 30%;
+        /* margin: auto; */
+        background-color: white;
+        height: 415px;
+        margin-top: 5%;
+        padding-top: 2%;
+        float: left;
+        padding-left: 2%;
+    }
+
+    .value {
+        height: 30px;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+
+    #para {
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+
+    .radiobox {
+        margin: 0;
+
+    }
+
+    #child {
+        margin-left: 19%;
+        margin-top: 3%;
+    }
+
+    #button {
+        margin-left: 20%;
+        height: 30px;
+        width: 62%;
+        margin-top: 5%;
+        background-color: #012031db;
+
+    }
+
+    #msg {
+        margin-left: 20%;
+        margin-top: 5%;
+
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0;
+        margin-top: 2%;
+    }
+
+    body {
+        background-image: url("../assets/img/istockphoto-1311934969-170667a.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        height: 750px;
+    }
+
+    #address {
+        /* border: 1px solid black; */
+        position: relative;
+    }
+
+    #phn {
+        /* border: 1px solid black; */
+        position: relative;
+    }
+
+    #email {
+        /* border: 1px solid black; */
+        position: relative;
+    }
+
+    h4 {
+        position: absolute;
+        margin: 0;
+        width: 21%;
+        top: 23%;
+        left: 11%;
+    }
+
+    .icon {
+        width: 3%;
+        height: 3%;
+        border-radius: 70px;
+    }
+
 </style>
+
 <body>
-    <div id = "div1">
-		<ul id = "unorder1">
-			<a href = "Home_page.html" target = "blank"><li class = "link-li">Home</li>
-			<a href = "About.html" target = "blank"><li  class = "link-li">About</li></a>
-			<a href = "menu.html" target = "blank"><li  class = "link-li">Menu</li></a>
-			<a href = "Contact.html"target = "blank"><li  class = "link-li">Contact</li></a>
-			<a href = "review.html"target = "blank"><li  class = "link-li">Review</li></a>
-			
-		</ul>
-		<img id = "logo" src = "../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
-		<p id = "para1">Klassy</p>
-	</div>
-    <div id = "div2">
+    <div id="div1">
+        <ul id="unorder1">
+            <a href="Home_page.html" target="blank">
+                <li class="link-li">Home</li>
+                <a href="About.html" target="blank">
+                    <li class="link-li">About</li>
+                </a>
+                <a href="menu.html" target="blank">
+                    <li class="link-li">Menu</li>
+                </a>
+                <a href="Contact.html" target="blank">
+                    <li class="link-li">Contact</li>
+                </a>
+                <a href="review.html" target="blank">
+                    <li class="link-li">Review</li>
+                </a>
+
+        </ul>
+        <img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
+        <p id="para1">Klassy</p>
+    </div>
+    <div id="div2">
         <h1>Send us message</h1>
-		<form >
-			<input class="value" type="text" placeholder="User name" required id="name"  pattern="[A-Za-z]{3,16}" title="minimum 3 char maximum 16 char"><br>
-			<input class="value" type="text" placeholder="Email ID" required id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "please include an '@' in the email address"><br>
-			<div id = "text1"></div>
-			<input class="value" type="tel" placeholder="Mobile"  maxlength="10" required id="num" style="margin-bottom: 1%;"> <br>
-            <label for="para" id = "para">prefered mode of communication</label>
-            <div id = "child">
-                <input type = "radio"  class = "radiobox">
+        <form onsubmit="message()">
+            <input class="value" type="text" placeholder="User name" required id="name" pattern="[A-Za-z]{3,16}"
+                title="minimum 3 char maximum 16 char"><br>
+            <input class="value" type="text" placeholder="Email ID" required id="mail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="please include an '@' in the email address"><br>
+            <div id="text1"></div>
+            <input class="value" type="tel" placeholder="Mobile" maxlength="10" required id="num"
+                style="margin-bottom: 1%;"> <br>
+            <label for="para" id="para">prefered mode of communication</label>
+            <div id="child">
+                <input type="radio" class="radiobox">
                 <label for="mobile">mobile</label>
-                <input type = "radio"  class = "radiobox">
+                <input type="radio" class="radiobox">
                 <label for="email">email</label>
             </div>
-			<textarea type="text"  id="msg" placeholder="message" required rows="2" cols="30"></textarea><br>
-			<input id="button" type="submit" placeholder="submit" value="submit" required>
-			
-		</form>
+            <textarea type="text" id="msg" placeholder="message" required rows="2" cols="30"></textarea><br>
+            <input id="button" type="submit" placeholder="submit" value="submit" required>
+
+        </form>
     </div>
-    <div id = "div3"></div>
+    <div id="div3">
+        <div id="address">
+            <img src="../assets/img/icon-address-1.jpg" alt="address" width="10%" height="5%"
+                style="border-radius: 70px;">
+            <h4>Address</h4>
+        </div>
+        <p>klassyrestaraunt, 42nd Living St, 43043 New York, NY</p>
+        <div id="phn">
+            <img src="../assets/img/phone-icon.png" alt="phone" width="10%" height="5%" style="border-radius: 70px;">
+            <h4>Phone</h4>
+        </div>
+        <p>You can also contact us by phone 00553123-2323</p>
+        <div id="email">
+            <img src="../assets/img/png-transparent-mail-computer.png" alt="mail" width="10%" height="5%">
+            <h4>Email</h4>
+        </div>
+        <p>email:klassyrestaraunt@gmail.com</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.45012884281!2d-115.3150826601647!3d36.124918453778385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sen!2sin!4v1635571440068!5m2!1sen!2sin"
+            width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <script>
+        function message(){
+            alert("your message successfully sended")
+        }
+    </script>
 </body>
+
 </html>

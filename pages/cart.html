@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,88 +8,187 @@
     <title>Document</title>
 </head>
 <style>
-        .img-add {
-            width: 350px;
-            height: 350px;
-            border: 1px solid #012031db;
-            float: left;
-            margin-left: 100px;
-            margin-top: 30px;
-            background-repeat: no-repeat;
-            background-size: cover;
-           
-         } 
-        .foodimg {
-            width: 80%;
-            height: 70%;
-            margin-left: 10%;
-            margin-top: 5%;
+    #div1 {
+        height: 60px;
+        width: 100%;
+        background-color: #012031db;
+        border: 1px solid black;
 
-        }
-        #addmenu {
-          
-            width: 80%;
-            margin: auto;
-            height: 910px;
+    }
 
-        }
-        #button-div{
-            margin-top: 3%;
-            position: relative;
+    .link-li {
+        /* border: 1px solid black; */
+        list-style: none;
+        height: 60%;
+        margin-top: 10%;
+        margin-left: 4%;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 6px;
+        font-size: 20px;
+    }
 
-        }
-        .para2{
-            width: 15px;
-            /* border: none; */
-            position: absolute;
-            left: 115px;
-        }
-        .para1{
-            width:12%;
-            margin: 0;
-            position: absolute;
-            left: 10%;
-            top: 2px;
-        }
-        .button2{
-            margin-left: 41%;
-        }
-        .button1{
-            position: absolute;
-            
-            left: 25%;
-        }
-        .button3{
-            margin-left:5%;
-        }
-        h2 {
-            margin: 0;
-            margin-left: 8%;
-        }
+    #logo {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        right: 0;
+        border-radius: 50px;
+        /* top:3px; */
+    }
+
+    #para1 {
+        margin: 0;
+        position: absolute;
+        /* top: 9; */
+        right: 70px;
+        font-size: 40px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    #unorder1 {
+        margin: 0;
+        position: absolute;
+        height: 9%;
+        /* border:1px solid black; */
+        display: flex;
+        width: 60%;
+
+    }
+
+    .link-li:hover {
+        background-color: #012031db;
+        color: white;
+        border-radius: 10px;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .img-add {
+        width: 350px;
+        height: 350px;
+        border: 1px solid #012031db;
+        float: left;
+        margin-left: 100px;
+        margin-top: 30px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .foodimg {
+        width: 80%;
+        height: 70%;
+        margin-left: 10%;
+        margin-top: 5%;
+
+    }
+
+    #addmenu {
+
+        width: 80%;
+        margin: auto;
+        height: 910px;
+
+    }
+
+    #button-div {
+        margin-top: 3%;
+        position: relative;
+
+    }
+
+    .para2 {
+        width: 15px;
+        /* border: none; */
+        position: absolute;
+        left: 115px;
+    }
+
+    .para1 {
+        width: 12%;
+        margin: 0;
+        position: absolute;
+        left: 10%;
+        top: 2px;
+        color: #012031db;
+    }
+
+    .button2 {
+        margin-left: 41%;
+        background-color: #012031db;
+    }
+
+    .button1 {
+        position: absolute;
+        background-color: #012031db;
+        left: 25%;
+    }
+
+    .button3 {
+        margin-left: 5%;
+        background-color: #012031db;
+    }
+
+    h2 {
+        margin: 0;
+        margin-left: 8%;
+        color: #012031db;
+    }
 </style>
+
 <body>
+    <div id="div1">
+        <ul id="unorder1">
+            <a href="Home_page.html" target="blank">
+                <li class="link-li">Home</li>
+                <a href="About.html" target="blank">
+                    <li class="link-li">About</li>
+                </a>
+                <a href="menu.html" target="blank">
+                    <li class="link-li">Menu</li>
+                </a>
+                <a href="Contact.html" target="blank">
+                    <li class="link-li">Contact</li>
+                </a>
+                <a href="review.html" target="blank">
+                    <li class="link-li">Review</li>
+                </a>
+
+        </ul>
+        <img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
+        <p id="para1">Klassy</p>
+    </div>
     <h1>Cart</h1>
-    <div id = "addmenu"></div>
+    <div id="addmenu"></div>
     <script>
         let userlist = [];
         function onPageLoad() {
-            let listValue = JSON.parse(localStorage.getItem("cart")); 
+            let listValue = JSON.parse(localStorage.getItem("cart"));
             if (listValue != null) {
                 userlist = listValue;
-            } 
+            }
             else {
                 userlist = [];
                 localStorage.setItem("cart", JSON.stringify(userlist));
             }
         }
         onPageLoad();
-        function renderCart(addCart){
+        // added value in the cart page
+        function renderCart(addCart) {
             let len = addCart.length;
-            let adding ="";
+            let adding = "";
             console.log(len);
-            for(i = 0; i < len; i++){
+            for (i = 0; i < len; i++) {
                 let obj = addCart[i];
-                let food = `<div id = "img-div${JSON.stringify(i+1)}" class = "img-add">
+                let food = `<div id = "img-div${JSON.stringify(i + 1)}" class = "img-add">
                                     <h2> ${obj.imgname}</h2>
                                     <img src=${obj.imgurl} class = "foodimg" alt="foodname">
                                     <div id = "button-div">
@@ -108,40 +208,45 @@
         let getValue = JSON.parse(localStorage.getItem("cart"));
         renderCart(getValue);
         console.log(getValue);
-        function increase(){
+        // increase the quantity value.
+        function increase() {
             let getattribute = event.target.value;
             console.log(getattribute);
-            let value1 = document.getElementById("para-"+getattribute).value;
+            let value1 = document.getElementById("para-" + getattribute).value;
             console.log(value1);
             let typecasting = JSON.parse(value1);
-            let qtyValue = typecasting+1;
-            if(qtyValue != null){
-                document.getElementById("para-"+getattribute).value = qtyValue;
+            let qtyValue = typecasting + 1;
+            if (qtyValue != null) {
+                document.getElementById("para-" + getattribute).value = qtyValue;
             }
-            let foodrate = document.getElementById("rate-"+getattribute).getAttribute("value");
+            let foodrate = document.getElementById("rate-" + getattribute).getAttribute("value");
             console.log(foodrate);
-            let total = foodrate*qtyValue;
-            if(total != null){
-                document.getElementById("rate-"+getattribute).innerText = total;
+            let total = foodrate * qtyValue;
+            if (total != null) {
+                document.getElementById("rate-" + getattribute).innerText = "Rs"+total;
             }
         }
-        function decrease(){
+        // decrease the quantity value.
+        function decrease() {
             let getattribute = event.target.value;
             console.log(getattribute);
-            let value1 = document.getElementById("para-"+getattribute).value;
+            let value1 = document.getElementById("para-" + getattribute).value;
             console.log(value1);
             let typecasting = JSON.parse(value1);
-            let qtyValue = typecasting-1;
-            if(qtyValue != null){
-                document.getElementById("para-"+getattribute).value = qtyValue;
+            let qtyValue = value1>1 ?typecasting -1:1; //condition ? true : false;
+           
+
+            if (qtyValue != null) {
+                document.getElementById("para-" + getattribute).value = qtyValue;
             }
-            let foodrate = document.getElementById("rate-"+getattribute).getAttribute("value");
+            let foodrate = document.getElementById("rate-" + getattribute).getAttribute("value");
             console.log(foodrate);
-            let total = foodrate*qtyValue;
-            if(total != null){
-                document.getElementById("rate-"+getattribute).innerText = total;
+            let total = foodrate * qtyValue;
+            if (total != null) {
+                document.getElementById("rate-" + getattribute).innerText = "Rs"+total;
             }
         }
     </script>
 </body>
+
 </html>

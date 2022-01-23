@@ -8,17 +8,18 @@
 </head>
 <style>
     #home{
-        width: 50%;
-		height: 200px;
+        width: 40%;
+		height: 255px;
         margin: auto;
 		position:relative;
 		box-shadow: 0 0 10px;
-		background-color:white;
-		color: black;
+		background-color: #012031db;
+		color:white;
+		margin-top: 5%;
 
     }
 	body{
-		background-image: url("./../assets/img/16692.jpg");
+		/* background-image: url("./../assets/img/abstract-irregular-polygon-background-blue-green-vector-27120693.jpg"); */
 		background-repeat: no-repeat;
 		background-size: cover;
 		margin: 0;
@@ -31,33 +32,51 @@
 		margin-left: 1%;
 	}
 	.input{
-		height: 38px;
+		/* height: 38px;
 		position: absolute;
 		left: 5%;
 		top: 10%;
-		width: 40%;
+		width: 41%;
 		box-shadow: 0 0 10px;
+		border: none; */
+		height: 30px;
+		margin-top: 5%;
+		width: 60%;
+		margin-left: 5%;
+		
 	}
 	
     #addbutton{
-		position: absolute;
-		left: 38%;
-		top: 45%;
-		width: 25%;
-		height: 20%;
-		background-color: #012031db; 
-		border: 1px solid #012031db;
+		margin-left: 50%;
+		margin-top: 3%;
+		height: 30px;
+		width: 109px;
+		color:white;
+   		background-color: #253f4e;
+    	border: 1px solid;
 
     }
     #newTask{
-        width: 40%;
-        height: 35px;
-		position: absolute;
-		left: 54%;
-		top: 10%;
-		padding-top: 1%;
-		box-shadow: 0 0 10px;
+		margin-top: 5%;
+		margin-left: 30%;
     }
+	#rating{
+		margin-left: 25px;
+		width: 15%;
+		height: 20px;
+	}
+	#lable1{
+		margin-left: 16%;
+	} 
+	#lable2{
+		margin-left: 16%;
+		position: absolute;
+		/* left: 3%; */
+		top: 55%;
+	}
+	#lable3{
+		margin-left: 16%;
+	}
     h1{
         text-align: center;
 		color:aliceblue;
@@ -76,8 +95,11 @@
 		margin-top: 1%;
 		height: 20%;
 		box-sizing: border-box;
-		color: white;
+		color:black;
 		
+	}
+	.review-div:hover{
+		box-shadow: 0 0 10px;
 	}
 	.head1{
 		width:15%;
@@ -108,13 +130,14 @@
 	}
 	
 	 .review{
-		color: white;
+		color:black;
 	 }
 	
 	#div1{
 		height:60px;
 		width:101%;
-		background-color:white; 
+		background-color: #012031db; 
+		
 	
 	}
 	li{
@@ -131,7 +154,7 @@
 	}
 	a{
 		text-decoration: none;
-		color:black;
+		color: white;
 	}
 	#nav{
 		margin:0;
@@ -142,14 +165,11 @@
 		
 	}
 	li:hover{
-		background-color:#012031db;
-		border-radius: 10px
-; 
+		background-color:white;
+		border-radius: 10px;
+		
 	}
-	a:hover{
-		color:white;
-	}
-	
+	a:hover{color: black;}
 	#logo{
 		height:60px;
 		width:60px;
@@ -198,14 +218,17 @@
 	<img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
 	<p id="para1">Klassy</p>
 </div>
-	<h1>Review</h1>
+	<!-- <h1>Review</h1> -->
 	<div id = "home">
 		
-		<form>
-			
-			<input type="text" id = "name" class = "input" placeholder="Name" required>
-			<textarea type="text"  id="newTask" placeholder="Comment" required rows="5" cols="40"></textarea><br>
-			<button type="submit" id="addbutton" onclick = "submitHandler(event)" > Add comment </button>
+		<form onsubmit="submitHandler(event)">
+			<label for="name" id = "lable1">Name:</label>
+			<input type="text" id = "name" class = "input" placeholder="Name"><br>
+			<label for="quantity" id = "lable2">Message:</label>
+			<textarea type="text"  id="newTask" placeholder="Comment" rows="5" cols="40"></textarea><br>
+			<label for="quantity" id = "lable3">rating:</label>
+  			<input type="number" id="rating" min="1" max="5"><br>
+			<button type="submit" id="addbutton"> Add comment </button>
 			
 		</form>
 	
@@ -216,7 +239,7 @@
 			<div id = "child1">
 				<img class = "icon" src = "../assets/img/login-icon.png" alt="icon" >
 				<h4 class = "head1">Yamuna</h4>
-				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png"s width = "10%" height = "5%" alt = "starimg"><br>
+				<img class = "star" src = "../assets/img/Star_rating_5_of_5.png" width = "10%" height = "5%" alt = "starimg"><br>
 			</div>		
 			<p class = "review">Great happening place mostly for youngster to enjoy with r loved once and friends with cheers drinks and cool attitude of stafff and most important mouth snaking food.</p>
 		</div>
@@ -224,7 +247,7 @@
 			<div id = "child2">
 				<img class = "icon" src = "../assets/img/login-icon.png" alt="icon" >
 				<h4 class = "head1">Gowtham</h4>
-				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png" width = "10%" height = "5%" alt = "starimg"><br>
+				<img class = "star" src = "../assets/img/Star_rating_5_of_5.png" width = "10%" height = "5%" alt = "starimg"><br>
 			</div>
 			<p class = "review">A very happening place with my friends . 
 				Went there in group, its a place to go with friends after work for a drink or to play pool and hangout.
@@ -234,7 +257,7 @@
 			<div id = "child3">
 				<img class  = "icon" src = "../assets/img/login-icon.png" alt="icon">
 				<h4 class = "head1">Madan</h4>
-				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png" width = "10%" height = "5%" alt = "starimg"><br>
+				<img class = "star" src = "../assets/img/Star_rating_5_of_5.png" width = "10%" height = "5%" alt = "starimg"><br>
 			</div>
 			<p class = "review">First I loved the ambience,
 				second the surrounding was good and drink is quiet worthy and we spent 
@@ -244,7 +267,7 @@
 			<div id = "child4">
 				<img class  = "icon" src = "../assets/img/login-icon.png" alt="icon">
 				<h4 class = "head1">leena</h4>
-				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png" width = "10%" height = "5%" alt = "starimg"><br>
+				<img class = "star" src = "../assets/img/Star_rating_5_of_5.png" width = "10%" height = "5%" alt = "starimg"><br>
 			</div>
 			<p class = "review">Great place to hangout with friends!! and gave us good recommendations.</p>
 		</div>
@@ -252,7 +275,7 @@
 			<div id = "child5">
 				<img class  = "icon" src = "../assets/img/1200px-OOjs_UI_icon_userAvatar.svg.png" alt="icon">
 				<h4 class = "head1">Ram</h4>
-				<img class = "star" src = "../assets/img/5-stars-png-no-background-4.png" width = "10%" height = "5%" alt = "starimg"><br>
+				<img class = "star" src = "../assets/img/Star_rating_5_of_5.png" width = "10%" height = "5%" alt = "starimg"><br>
 			</div>
 			<p class = "review">The food was excellent, generous portions and great prices. The service was fast and friendly.
 				I highly recommended this place for a perfect drink and dinner . Loads of love to you guys keep rocking </p>
