@@ -1,0 +1,177 @@
+#home{
+    width: 40%;
+    height: 255px;
+    margin: auto;
+    position:relative;
+    box-shadow: 0 0 10px;
+    background-color: #012031db;
+    color:white;
+    margin-top: 5%;
+
+}
+body{
+    /* background-image: url("./../assets/img/abstract-irregular-polygon-background-blue-green-vector-27120693.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.para{
+    margin: 0;
+    width: 50px;
+    float: left;
+    margin-top: 5%;
+    margin-left: 1%;
+}
+.input{
+    /* height: 38px;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 41%;
+    box-shadow: 0 0 10px;
+    border: none; */
+    height: 30px;
+    margin-top: 5%;
+    width: 60%;
+    margin-left: 5%;
+    
+}
+
+#addbutton{
+    margin-left: 50%;
+    margin-top: 3%;
+    height: 30px;
+    width: 109px;
+    color:white;
+       background-color: #253f4e;
+    border: 1px solid;
+
+}
+#newTask{
+    margin-top: 5%;
+    margin-left: 30%;
+}
+#rating{
+    margin-left: 25px;
+    width: 15%;
+    height: 20px;
+}
+#lable1{
+    margin-left: 16%;
+} 
+#lable2{
+    margin-left: 16%;
+    position: absolute;
+    /* left: 3%; */
+    top: 55%;
+}
+#lable3{
+    margin-left: 16%;
+}
+h1{
+    text-align: center;
+    color:aliceblue;
+}
+.icon{
+    width:30px;
+    float:left;
+    border-radius: 30px;
+}
+#parent{
+    width: 50%;
+    margin: auto;
+}
+.review-div{
+    padding: 1%;
+    margin-top: 1%;
+    height: 20%;
+    box-sizing: border-box;
+    color:black;
+    
+}
+.review-div:hover{
+    box-shadow: 0 0 10px;
+}
+.head1{
+    width:15%;
+    float:left;
+    margin: 0;
+    margin-left: 1%;
+    margin-top: 5px;
+    font-size:20px;
+    color: black;
+}
+ul{
+    padding: 0;
+}
+.para1{
+    margin-top: 2%;
+}
+.head2{
+    width:15%;
+    margin: 0;
+     margin-left: 7%; 
+    font-size:20px;
+    color: black;
+}
+.star{
+    width:70px;
+    float:right;
+    margin-top: 2%;
+}
+
+ .review{
+    color:black;
+ }
+
+#div1{
+    height:60px;
+    width:101%;
+    background-color: #012031db; 
+    
+
+}
+li{
+    list-style:none;
+    height: 60%;
+    margin-top: 1%; 
+    margin-left:4%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 6px;
+    font-size: 20px;
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#nav{
+    margin:0;
+    position: absolute;
+    height:9%;
+    display: flex;
+    width: 60%;
+    
+}
+li:hover{
+    background-color:white;
+    border-radius: 10px;
+    
+}
+a:hover{color: black;}
+#logo{
+    height:60px;
+    width:60px;
+    position: absolute;
+    right:0;
+    border-radius:50px;
+}
+#para1{
+    margin:0;
+    position: absolute;
+    right: 70px;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+}

@@ -5,132 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <style>
-        #home{
-            border: 1px solid black;
-            width: 25%;
-            margin: auto;
-            margin-top: 12%;
-            height: 300px;
-            box-shadow: 0 0 10px;
-
-        }
-        .input1{
-            margin-left: 17%;
-            height: 20px;
-            width: 200px;
-        }
-        button{
-            margin-left: 40%;
-        }
-        p{
-            margin-left: 17%;
-            color: white;
-        }
-        body{
-             background-image: url("../assets/img/Simple-Minimalist-Background-Image.jpg");
-             background-repeat: no-repeat;
-             background-size: cover;
-        }
-        #error1{
-			
-			margin-left: 15%;
-			margin-top: 1%;
-			color: red;
-		}
-		#error2{
-			
-			margin-left: 15%;
-			margin-top: 1%;
-			color: red;
-		}
-    </style>
+    <link rel = "stylesheet" href = "../assets/css/addmenu.css">
 </head>
 <body>
+    <!--<header><footer><main><nav><section><article>-->
     <div id = "home">
-        <form onsubmit="submitHandler()">
+        <form onsubmit="submitHandler(event)">
             <p>Foodname:</p>
-			<input type = "text"  class = "input1"  required id = "name">
+            <label for="name">Food Name</label>
+            <!-- class='form-control'-->
+			<input type = "text"  class = "input1"   id = "name" required autofocus> <!-- required autofocus-->
             <div id = "error1"></div>
 			<p>image url</p> 
 			<input type = "text"  class = "input1" required id = "url"><br>	
             <div id = "error2"></div>
-			<p>price:</p> 
-			<input class="input1" type="text"  required id="price"><br>	
-            <br>
+			<p>price(Rs):</p> 
+            <!--price field datatype = numeric, min,max-->
+			<input class="input1" type="number"  required id="price" min="1" max=10000><br>	
+            <br/> 
            <button type="submit">submit</button>
 		</form>	
     </div>
-    <script>
-        
-        
-        let foodList = []    
-        function onPageLoad(){
-			let listValue = JSON.parse(localStorage.getItem("fooditems"));
-            console.log(listValue)
-            
-			if(listValue != null){
-				foodList = listValue;
-			}
-            else{
-                localStorage.setItem("fooditems",JSON.stringify([]));
-            }
-		}
-		onPageLoad();
-        function submitHandler(){
-            event.preventDefault();
-            let name = document.getElementById("name").value;
-            let img = document.getElementById("url").value;
-            let price = document.getElementById("price").value;
-            let imgName = foodName(name);
-            let imgUrl = foodUrl(img);
-            if(imgName){
-                 document.getElementById("error1").innerText = "this name already exist";
-             } 
-             else if(imgUrl){
-                document.getElementById("error2").innerText = "this url already exist";
-             }
-             else{
-                let foodOPJ = {
-                    "fname":name,
-                    "img":img,
-                    "price":price
-
-                }
-
-                foodList.push(foodOPJ);
-                console.log(foodList);
-                let value = JSON.stringify(foodList);
-                localStorage.setItem("fooditems", value);
-             }
-            
-           
-             
-        }
-        function foodName(name){
-            let len = foodList.length;
-            let isExist = false;
-            for(let i = 0; i < len; i++){
-                if(foodList[i].fname == name ){
-                    isExist = true
-                }
-            }
-            return isExist;
-            
-        }
-        function foodUrl(url){
-            let len = foodList.length;
-            let isExist = false;
-            for(let i = 0; i < len; i++){
-                if(foodList[i].img == url){
-                    isExist = true
-                }
-            }
-            return isExist;
-        }
-
-        
-    </script>
+    <script src="../assets/js/addmenu.js"></script>
 </body>
 </html>

@@ -50,6 +50,6 @@ function clickHandler(name,url,price){
   }
   imgArray.push(cartobj);
   localStorage.setItem("cart",(JSON.stringify(imgArray)));
-
+  
 }
 
