@@ -4,7 +4,9 @@
   background-color: #012031db;
   border: 1px solid black;
 }
-
+body{
+  margin: 0;
+}
 .link-li {
   /* border: 1px solid black; */
   list-style: none;
@@ -15,6 +17,7 @@
   padding-right: 25px;
   padding-top: 6px;
   font-size: 20px;
+  color: white;
 }
 
 #logo {

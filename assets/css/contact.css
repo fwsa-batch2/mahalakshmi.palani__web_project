@@ -123,7 +123,7 @@ h1 {
 }
 
 body {
-    background-image: url("../assets/img/istockphoto-1311934969-170667a.jpg");
+    background-image: url("./../img/istockphoto-1311934969-170667a.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
