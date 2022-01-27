@@ -38,6 +38,18 @@ renderFood(getValue);
 console.log(getValue);
 // set the value in local storage.
 let imgArray = [];
+function cartOnPageLoad() {
+  let listValue = JSON.parse(localStorage.getItem("cart")); 
+
+  if (listValue != null) {
+    imgArray = listValue;
+  } else {
+    
+    localStorage.setItem("cart", JSON.stringify([]));
+  }
+  
+}
+cartOnPageLoad();
 function clickHandler(name,url,price){
   console.log(name);
   console.log(url);
