@@ -19,15 +19,23 @@ function login(event){
             console.log(userDetail[i]);
 
             if(userDetail[i].email == currentMail && userDetail[i].password == currentPassword){
-                window.location.href = "menu.html";
+                if(currentMail == "mahalakshmiragavi@gmail.com"){
+                    window.location.href = "adminmenu.html"
+                }
+                else{
+                    window.location.href = "customer_menu.html";
+                }
                 break;
             }
             else if(userDetail[i].email != currentMail && userDetail[i].password == currentPassword){
                 document.getElementById("text1").innerText = "enter valid Email";
             }
-            else{
+            else if(userDetail[i].email == currentMail && userDetail[i].password != currentPassword){
                 document.getElementById("text2").innerText = "enter valid password";
                 
+            }
+            else{
+                alert("please sign up first1");
             }
         }
     }

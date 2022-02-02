@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="div1">
+        <ul>
+            <li>
+                <a href="Home_page.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="About.html">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="menu.html">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="Contact.html">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="review.html">
+                    Review
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </li>
+        </ul>
+
+        <img id="logo" src="../assets/img/login-icon.png" alt="logo">
+    </div>
+    <div id = "food-items">
+        <div  class = "food-div">
+            <h2>Mutton Curry</h2>
+            <img src= "../assets/img/Mutton_Curry.jpg" class = "foodimg" alt="foodname">
+            <p>195</p>
+            <button type = "button" data-food>ADD CART</button>
+        </div>
+        <div   class = "food-div">
+            <h2>Green Chili Chicken</h2>
+            <img src= "../assets/img/Andhra_Style_Green_Chili_Chicken_.jpg" class = "foodimg" alt="foodname">
+            <p>145</p>
+            <button type = "button" data-food>ADD CART</button>
+        </div>
+        <div   class = "food-div">
+            <h2>Cauliflower Tikka Masala</h2>
+            <img src= "../assets/img/cauliflower_tikka_masala.jpg" class = "foodimg" alt="foodname">
+            <p>105</p>
+            <button type = "button" data-food>ADD CART</button>
+        </div>
+        <div   class = "food-div">
+            <h2>Paneer Tikka Masala</h2>
+            <img src= "../assets/img/paneer-makhani-500x500.jpg" class = "foodimg" alt="foodname">
+            <p>130</p>
+            <button type = "button" data-food>ADD CART</button>
+        </div>
+    </div>
+    <div id="addmenu">
+    </div>
+
+    <script src="../assets/js/menu.js"></script>
+   
+    <!-- <script>
+       
+        function adminPage() {
+            let code = prompt("please enter the secret code");
+            console.log(code);
+            
+            if(code == "ImMaha"){
+                window.location.href = "addmenu.html";
+            }
+            else {
+               alert("only admin can access this page");
+               window.location.href = "menu.html";
+             
+             }
+
+        }
+        
+    </script> -->
+
+</body>
+
+</html>

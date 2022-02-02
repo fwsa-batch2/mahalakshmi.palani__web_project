@@ -8,7 +8,20 @@ body {
     background-color: #012031db;
 
 }
-
+#food-items{
+    width: 80%;
+    margin: auto;
+    height: 910px;
+}
+.food-div {
+    width: 350px;
+    height: 350px;
+    background-color:#01203112;
+    box-shadow: 0 0 10px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 70px;
+}
 li {
     /* border: 1px solid black; */
     list-style: none;
