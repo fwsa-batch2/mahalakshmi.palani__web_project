@@ -47,6 +47,7 @@ function submitHandler(event){
         let value1 = JSON.stringify(userlist);
         console.log(value1);
         localStorage.setItem("list", value1);
+        alert("succssfully your account created")
         window.location.href = "login.html";
     }
 

@@ -59,6 +59,7 @@ a:hover{
 	right: 70px;
 	font-size: 40px;
 	font-family: 'Dancing Script', cursive;
+	/* font-family: 'Lobster', cursive; */
 }
 #para2{
 	margin:0;
@@ -68,13 +69,13 @@ a:hover{
 	color: aliceblue;
 }
 h1{
-	margin:0;
-	position: absolute;
-	top: 40%;
-	left:20%;
-	font-family: 'Dancing Script', cursive;
-	font-size: 35px;
-	color: aliceblue;
+	margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: aliceblue;
 }
 #child1{
 	height:500px;
@@ -88,13 +89,8 @@ h1{
 #child2{
 	height:500px;
 	width:70%;
-	/* border:1px solid black; */
 	float:left;
 	box-shadow: 0 0 5px;
-	/* background-image:url("./../img/pexels-rachel-claire-5490933.jpg"); */
-	 /* background-repeat :no-repeat;  */
-	/* background-size:cover;  */
-	/* background-attachment: fixed; */
 }
 img{
 	width: 100%;
@@ -107,8 +103,6 @@ img{
 	top: 60%;
 	right:15%;
 	border-radius:15%; 
-	/* background-color: darkgray; */
-	/* border:1px solid black; */
 	box-shadow: 0px 0px 10px black;
 	font-size:15px;
 	color: white;
@@ -123,8 +117,6 @@ img{
 	top: 60%;
 	left:15%;
 	border-radius:15%;
-	/* background-color: darkgray; */
-	/* border:1px solid black; */
 	box-shadow: 0px 0px 10px black;
 	font-size:15px;
 	color: white;

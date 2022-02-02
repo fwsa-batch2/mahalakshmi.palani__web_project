@@ -46,7 +46,9 @@ li:hover {
 a:hover {
     color: white;
 }
-
+#home-page{
+    background-image: url("../img/1611445018839.jpg");
+}
 #logo {
     height: 60px;
     width: 60px;

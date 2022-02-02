@@ -19,7 +19,7 @@ function login(event){
             console.log(userDetail[i]);
 
             if(userDetail[i].email == currentMail && userDetail[i].password == currentPassword){
-                window.location.href = "Home_page.html";
+                window.location.href = "menu.html";
                 break;
             }
             else if(userDetail[i].email != currentMail && userDetail[i].password == currentPassword){

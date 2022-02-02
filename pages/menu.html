@@ -46,10 +46,13 @@
             </li>
         </ul>
 
-        <img id="logo" src="../assets/img/201-2011704_restaurant-jd-sports-logo-png-transparent-png.png" alt="logo">
-        <p id="para1">Klassy</p>
+        <img id="logo" src="../assets/img/login-icon.png" alt="logo">
+        <!-- <p id="para1">Klassy</p> -->
     </div>
-    <a href="cart.html"> <img src="../assets/img/card-img.jpg" id="cart" alt="cart"></a>
+    <div id = "home-page">
+        <a href="cart.html"> <img src="../assets/img/card-img.jpg" id="cart" alt="cart"></a>
+    </div>
+   
     <div id="addmenu"></div>
 
     <script src="../assets/js/menu.js"></script>
@@ -57,7 +60,7 @@
     <script>
        
         function adminPage() {
-            let code = prompt("please enter the secret code = ");
+            let code = prompt("please enter the secret code");
             console.log(code);
             
             if(code == "ImMaha"){
@@ -65,7 +68,7 @@
             }
             else {
                alert("only admin can access this page");
-               window.history.back();
+               window.location.href = "menu.html";
              
              }
 
