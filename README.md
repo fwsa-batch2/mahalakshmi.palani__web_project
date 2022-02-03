@@ -1,10 +1,10 @@
   # Klassy resturant:
   # link:
-  Git-hub Link : [https://github.com/fwsa-batch-02/klassyrestaurantapp-ui](https://github.com/fwsa-batch-02/klassyrestaurantapp-ui)
+  Git-hub Link : [https://github.com/fwsa-batch2/mahalakshmi.palani__web_project/](https://github.com/fwsa-batch2/mahalakshmi.palani__web_project/)
 
-  Netlify link : [https://klassyrestaurantapp-ui-mahalakshmipalani.netlify.app/](https://klassyrestaurantapp-ui-mahalakshmipalani.netlify.app/)
+  Netlify link : [https://fwsa-batch2.github.io/mahalakshmi.palani__web_project/](https://fwsa-batch2.github.io/mahalakshmi.palani__web_project/)
   
-  Sonarcloud link : [https://sonarcloud.io/project/overview?id=fwsa-batch-02_klassyrestaurantapp-ui](https://sonarcloud.io/project/overview?id=fwsa-batch-02_klassyrestaurantapp-ui)
+  Sonarcloud link : [https://sonarcloud.io/project/overview?id=fwsa-batch2_mahalakshmi.palani__web_project](https://sonarcloud.io/project/overview?id=fwsa-batch2_mahalakshmi.palani__web_project)
   
 
   # Features:
