@@ -25,7 +25,8 @@ function renderFood(addItems){
     let food = `<div id = "img-div${JSON.stringify(i+1)}" class = "img-add">
                         <h2> ${obj.fname}</h2>
                         <img src=${obj.img} class = "foodimg" alt="foodname">
-                        <p> RS.${obj.price}</p><button type = "button" data-food onclick = \"clickHandler('${obj.fname}','${obj.img}','${obj.price}')\">ADD CART</button>
+                        <p> RS.${obj.price}</p><button type = "button"  onclick = \"clickHandler('${obj.fname}','${obj.img}','${obj.price}')\">ADD CART</button>
+                        <button type = "button" id = "buy-item" onclick = "#">BUY NOW</button>
                     </div>`;
     adding = adding + food;
     
